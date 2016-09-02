@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ </head>
+ <body>
+  <p>
+   {% load static %}
+   <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+   <script src="{% static 'jquery-2.2.4.min.js' %}">
+   </script>
+  </p>
+  <title>
+   Topic Viewer
+  </title>
+  <div class="filelist" id="div_list">
+   <p class="customfont">
+    -7yF42k0CcJhtPw51oaOqQ
+   </p>
+  </div>
+  <div id="table_content">
+  </div>
+  <div id="document_title">
+   <a class="topdescr" href="/topic/" target="_blank">
+    Topic description
+   </a>
+   <a class="changefiles" href="/welcome/">
+    Change files
+   </a>
+   <h1 class="doctitle">
+   </h1>
+  </div>
+  <footer class="footer">
+  </footer>
+  <script type="text/javascript">
+   $(".customfont").hover(function(){
+  $(this).css("background-color", "#646464");
+}, function(){
+  $(this).css("background-color", "#4b4b4b");
+});
+
+
+	//------------------------
+
+	$( ".customfont" ).click(function( event ) {
+    var text = $(this).text()
+    var path = '../static/tables/'+text+'.html'
+    var str = path.replace(/\s/g, '')
+    
+    $(".doctitle").text(text)
+    
+    $.ajax({
+      url: str,
+      cache: false,
+      success: function (data) { 
+       $("#table_content").empty()
+       $("#table_content").append(data); },
+       dataType: 'html'
+     });
+
+    $('#table_content').show();
+  });
+
+
+	//------------------------
+
+	$(window).scroll(function(){
+   var fixedtitle = $('#document_title'),
+   scroll = $(window).scrollTop();
+ });
+  </script>
+ </body>
+</html>

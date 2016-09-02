@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ </head>
+ <body>
+  <p>
+   {% load static %}
+   <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+   <script src="{% static 'jquery-2.2.4.min.js' %}">
+   </script>
+  </p>
+  <title>
+   Topic Description
+  </title>
+  <h1>
+   Topic description
+  </h1>
+  <div id="topics">
+   <table id="topiclist" style="padding:0%;margin:0%" with="100%">
+    <tr>
+     <td class="docdiv">
+      <p class="customfontleft">
+       Documento 0
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#ade844;color:white">
+       65
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#ade844;color:white">
+       [('thats', 1), ('friendly', 1), ('first', 1), ('strip', 1), ('see', 1), ('pool', 1), ('people', 1), ('tell', 1), ('little', 1), ('go', 1), ('ok', 1), ('get', 1), ('vegas', 1), ('walk', 1), ('im', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#5d7c5b;color:white">
+       67
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#5d7c5b;color:white">
+       [('even', 1), ('enjoyed', 1), ('check', 1), ('great', 1), ('definitely', 1), ('room', 1), ('dont', 1), ('show', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#d2ee79;color:white">
+       68
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#d2ee79;color:white">
+       [('place', 1), ('dont', 1), ('love', 1), ('enjoyed', 1), ('perfect', 1), ('hotel', 1), ('one', 1), ('view', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#05f9bb;color:white">
+       6
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#05f9bb;color:white">
+       [('ive', 1), ('get', 1), ('casino', 1), ('go', 1), ('top', 1), ('dont', 1), ('try', 1), ('know', 1), ('one', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#7c7b4e;color:white">
+       1
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#7c7b4e;color:white">
+       [('pretty', 1), ('away', 1), ('big', 1), ('chocolate', 1), ('one', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#a7b83a;color:white">
+       10
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#a7b83a;color:white">
+       [('like', 1), ('huge', 1), ('standard', 1), ('stay', 1), ('make', 1), ('nice', 1), ('much', 1), ('would', 1), ('room', 1), ('hotel', 1), ('supposed', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#9a09e6;color:white">
+       11
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#9a09e6;color:white">
+       [('vegas', 1), ('even', 1), ('one', 1), ('best', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#ead802;color:white">
+       13
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#ead802;color:white">
+       [('nice', 1), ('amazing', 1), ('restaurant', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#155ca7;color:white">
+       78
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#155ca7;color:white">
+       [('great', 1), ('worth', 1), ('little', 1), ('hotel', 1), ('amazing', 1), ('try', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#12433a;color:white">
+       17
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#12433a;color:white">
+       [('amazing', 1), ('table', 1), ('get', 1), ('make', 1), ('service', 1), ('room', 1), ('yes', 1), ('show', 1), ('place', 1), ('sure', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#1cbe3e;color:white">
+       82
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#1cbe3e;color:white">
+       [('take', 1), ('table', 1), ('every', 1), ('room', 1), ('show', 1), ('time', 1), ('one', 1), ('vegas', 1), ('place', 1), ('bar', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#a1c632;color:white">
+       83
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#a1c632;color:white">
+       [('everything', 1), ('definitely', 1), ('like', 1), ('hotel', 1), ('restaurant', 1), ('vegas', 1), ('well', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#13f8b8;color:white">
+       84
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#13f8b8;color:white">
+       [('didnt', 1), ('10', 1), ('service', 1), ('room', 1), ('better', 1), ('went', 1), ('place', 1), ('find', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#c95129;color:white">
+       86
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#c95129;color:white">
+       [('great', 1), ('also', 1), ('one', 1), ('think', 1), ('time', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#1914d6;color:white">
+       24
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#1914d6;color:white">
+       [('thing', 1), ('one', 1), ('check', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#d5ab56;color:white">
+       4
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#d5ab56;color:white">
+       [('meal', 1), ('water', 1), ('3', 1), ('table', 1), ('even', 1), ('nice', 1), ('really', 1), ('time', 1), ('great', 1), ('room', 1), ('one', 1), ('get', 1), ('us', 1), ('view', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#ebba37;color:white">
+       27
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#ebba37;color:white">
+       [('hotel', 1), ('table', 1), ('wait', 1), ('get', 1), ('really', 1), ('best', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#56a94c;color:white">
+       94
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#56a94c;color:white">
+       [('around', 1), ('restaurant', 1), ('service', 1), ('good', 1), ('nice', 1), ('right', 1), ('great', 1), ('room', 1), ('one', 1), ('place', 1), ('drink', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#fcaf7e;color:white">
+       99
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#fcaf7e;color:white">
+       [('around', 1), ('dont', 1), ('get', 1), ('ordered', 1), ('ever', 1), ('go', 1), ('hotel', 1), ('one', 1), ('even', 1), ('place', 1), ('would', 1), ('bar', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#c88b93;color:white">
+       42
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#c88b93;color:white">
+       [('ive', 1), ('cant', 1), ('paris', 1), ('ever', 1), ('go', 1), ('dont', 1), ('place', 1), ('take', 1), ('fucking', 1), ('get', 1), ('really', 1), ('would', 1), ('think', 1), ('bathroom', 1), ('stay', 1), ('best', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#8bf2b3;color:white">
+       43
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#8bf2b3;color:white">
+       [('place', 1), ('ive', 1), ('also', 1), ('ever', 1), ('casino', 1), ('great', 1), ('yet', 1), ('well', 1), ('good', 1), ('best', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#ab2685;color:white">
+       45
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#ab2685;color:white">
+       [('people', 1), ('amazing', 1), ('restaurant', 1), ('first', 1), ('service', 1), ('great', 1), ('way', 1), ('place', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#8733d2;color:white">
+       56
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#8733d2;color:white">
+       [('looking', 1), ('table', 1), ('even', 1), ('good', 1), ('time', 1), ('much', 1), ('one', 1), ('drink', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#e260f1;color:white">
+       57
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#e260f1;color:white">
+       [('take', 1), ('even', 1), ('make', 1), ('enjoyed', 1), ('time', 1), ('one', 1), ('vegas', 1), ('place', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="docdiv">
+      <p class="customfontleft">
+       Documento 1
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#c5a719;color:white">
+       2
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#c5a719;color:white">
+       [('come', 1), ('day', 1), ('bit', 1), ('ive', 1), ('ordered', 1), ('people', 1), ('much', 1), ('location', 1), ('menu', 1), ('great', 1), ('delicious', 1), ('also', 1), ('sweet', 1), ('show', 1), ('dishes', 1), ('dont', 1), ('try', 1), ('back', 1), ('food', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#154ef2;color:white">
+       5
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#154ef2;color:white">
+       [('like', 1), ('say', 1), ('ive', 1), ('nice', 1), ('service', 1), ('give', 1), ('lot', 1), ('great', 1), ('go', 1), ('price', 1), ('eat', 1), ('love', 1), ('good', 1), ('right', 1), ('everything', 1), ('one', 1), ('try', 1), ('back', 1), ('food', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#1d338a;color:white">
+       8
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#1d338a;color:white">
+       [('sandwich', 1), ('like', 1), ('ive', 1), ('first', 1), ('much', 1), ('go', 1), ('recommend', 1), ('went', 1), ('place', 1), ('pretty', 1), ('get', 1), ('good', 1), ('food', 1), ('would', 1), ('one', 1), ('stars', 1), ('back', 1), ('drink', 1), ('bread', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#9eecf5;color:white">
+       9
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#9eecf5;color:white">
+       [('stars', 1), ('bit', 1), ('2', 1), ('time', 1), ('feel', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#0605b8;color:white">
+       74
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#0605b8;color:white">
+       [('really', 4), ('good', 4), ('table', 3), ('time', 3), ('little', 3), ('place', 3), ('taste', 3), ('one', 3), ('try', 3), ('get', 3), ('nice', 2), ('go', 2), ('restaurant', 2), ('got', 2), ('back', 2), ('best', 2), ('make', 2), ('ordered', 2), ('much', 2), ('hotel', 2), ('im', 2), ('bar', 2), ('love', 2), ('would', 2), ('bit', 1), ('great', 1), ('us', 1), ('went', 1), ('know', 1), ('everything', 1), ('like', 1), ('service', 1), ('menu', 1), ('still', 1), ('thing', 1), ('think', 1), ('eat', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#c0ee06;color:white">
+       75
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#c0ee06;color:white">
+       [('friendly', 1), ('place', 1), ('bit', 1), ('pork', 1), ('get', 1), ('side', 1), ('little', 1), ('chocolate', 1), ('eat', 1), ('months', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#e11aac;color:white">
+       12
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#e11aac;color:white">
+       [('day', 1), ('nice', 1), ('time', 1), ('great', 1), ('hotel', 1), ('price', 1), ('menu', 1), ('started', 1), ('place', 1), ('3', 1), ('get', 1), ('good', 1), ('really', 1), ('would', 1), ('attentive', 1), ('one', 1), ('well', 1), ('food', 1), ('best', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#47bf81;color:white">
+       66
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#47bf81;color:white">
+       [('come', 1), ('like', 1), ('menu', 1), ('ordered', 1), ('time', 1), ('little', 1), ('dont', 1), ('looking', 1), ('try', 1), ('delicious', 1), ('could', 1), ('get', 1), ('good', 1), ('really', 1), ('see', 1), ('would', 1), ('one', 1), ('ive', 1), ('eat', 1), ('back', 1), ('food', 1), ('best', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#8347ce;color:white">
+       14
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#8347ce;color:white">
+       [('much', 1), ('go', 1), ('come', 1), ('flavor', 1), ('good', 1), ('ordered', 1), ('best', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#4f2504;color:white">
+       79
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#4f2504;color:white">
+       [('restaurant', 1), ('table', 1), ('could', 1), ('really', 1), ('great', 1), ('see', 1), ('one', 1), ('wait', 1), ('place', 1), ('food', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#f810de;color:white">
+       19
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#f810de;color:white">
+       [('two', 1), ('good', 1), ('great', 1), ('would', 1), ('fries', 1), ('try', 1), ('love', 1), ('slice', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#5f1b0a;color:white">
+       25
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#5f1b0a;color:white">
+       [('like', 1), ('ordered', 1), ('service', 1), ('time', 1), ('great', 1), ('want', 1), ('dont', 1), ('went', 1), ('place', 1), ('eat', 1), ('well', 1), ('3', 1), ('much', 1), ('good', 1), ('cheese', 1), ('absolutely', 1), ('try', 1), ('drink', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#a9c2e8;color:white">
+       29
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#a9c2e8;color:white">
+       [('great', 1), ('little', 1), ('try', 1), ('could', 1), ('also', 1), ('make', 1), ('night', 1), ('time', 1), ('food', 1), ('people', 1), ('see', 1), ('go', 1), ('next', 1), ('place', 1), ('drink', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#d56700;color:white">
+       30
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#d56700;color:white">
+       [('love', 2), ('tacos', 2), ('pork', 1), ('service', 1), ('nice', 1), ('want', 1), ('time', 1), ('great', 1), ('perfect', 1), ('go', 1), ('served', 1), ('new', 1), ('im', 1), ('didnt', 1), ('friendly', 1), ('restaurant', 1), ('delicious', 1), ('every', 1), ('really', 1), ('room', 1), ('eat', 1), ('food', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#c1ac29;color:white">
+       36
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#c1ac29;color:white">
+       [('didnt', 1), ('would', 1), ('delicious', 1), ('ordered', 1), ('many', 1), ('im', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#30c274;color:white">
+       37
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#30c274;color:white">
+       [('table', 1), ('time', 1), ('great', 1), ('go', 1), ('price', 1), ('even', 1), ('place', 1), ('people', 1), ('3', 1), ('restaurant', 1), ('open', 1), ('love', 1), ('big', 1), ('would', 1), ('think', 1), ('also', 1), ('back', 1), ('food', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#65dedf;color:white">
+       41
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#65dedf;color:white">
+       [('pork', 2), ('ordered', 2), ('time', 2), ('place', 2), ('food', 2), ('like', 1), ('nice', 1), ('service', 1), ('great', 1), ('much', 1), ('little', 1), ('go', 1), ('better', 1), ('dont', 1), ('good', 1), ('really', 1), ('went', 1), ('im', 1), ('experience', 1), ('try', 1), ('restaurant', 1), ('steak', 1), ('decided', 1), ('got', 1), ('big', 1), ('see', 1), ('would', 1), ('think', 1), ('get', 1), ('one', 1), ('best', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#694871;color:white">
+       93
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#694871;color:white">
+       [('dessert', 1), ('come', 1), ('like', 1), ('flavor', 1), ('make', 1), ('nice', 1), ('want', 1), ('love', 1), ('little', 1), ('go', 1), ('wait', 1), ('got', 1), ('really', 1), ('food', 1), ('back', 1), ('good', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#8aee37;color:white">
+       61
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#8aee37;color:white">
+       [('come', 1), ('first', 1), ('service', 1), ('ordered', 1), ('enjoyed', 1), ('people', 1), ('appetizers', 1), ('seated', 1), ('menu', 1), ('really', 1), ('im', 1), ('great', 1), ('thing', 1), ('restaurant', 1), ('good', 1), ('fantastic', 1), ('disappointed', 1), ('tacos', 1), ('see', 1), ('would', 1), ('one', 1), ('drink', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#51ada4;color:white">
+       48
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#51ada4;color:white">
+       [('friendly', 1), ('like', 1), ('two', 1), ('could', 1), ('sure', 1), ('ordered', 1), ('food', 1), ('great', 1), ('veggie', 1), ('impressed', 1), ('us', 1), ('make', 1), ('looking', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#ecd0d0;color:white">
+       72
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#ecd0d0;color:white">
+       [('one', 1), ('get', 1), ('make', 1), ('eat', 1), ('big', 1), ('sit', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#a9fa8c;color:white">
+       51
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#a9fa8c;color:white">
+       [('looking', 1), ('2', 1), ('time', 1), ('great', 1), ('little', 1), ('go', 1), ('place', 1), ('didnt', 1), ('restaurant', 1), ('even', 1), ('room', 1), ('one', 1), ('back', 1), ('food', 1), ('sandwich', 1), ('like', 1), ('first', 1), ('ordered', 1), ('service', 1), ('hotel', 1), ('price', 1), ('dont', 1), ('get', 1), ('made', 1), ('friendly', 1), ('well', 1), ('stars', 1), ('love', 1), ('really', 1), ('would', 1), ('think', 1), ('also', 1), ('try', 1), ('good', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#fe31e7;color:white">
+       59
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#fe31e7;color:white">
+       [('like', 1), ('2', 1), ('ordered', 1), ('great', 1), ('perfect', 1), ('menu', 1), ('wait', 1), ('friendly', 1), ('good', 1), ('delicious', 1), ('also', 1), ('love', 1), ('really', 1), ('taste', 1), ('get', 1), ('small', 1), ('food', 1)]
+      </p>
+     </td>
+    </tr>
+    <tr>
+     <td class="space">
+      <p class="customfontleft" style="background-color:#ead802;color:white">
+       13
+      </p>
+     </td>
+     <td class="space">
+      <p class="customfontright" style="background-color:#ead802;color:white">
+       [('fresh', 2), ('2', 2), ('go', 2), ('lime', 2), ('delicious', 2), ('even', 2), ('tacos', 2), ('food', 2), ('like', 2), ('beer', 2), ('ordered', 2), ('weekend', 2), ('also', 2), ('good', 2), ('drink', 2), ('would', 2), ('time', 1), ('little', 1), ('better', 1), ('us', 1), ('amazing', 1), ('expect', 1), ('one', 1), ('best', 1), ('first', 1), ('want', 1), ('price', 1), ('menu', 1), ('two', 1), ('really', 1), ('get', 1), ('try', 1), ('bite', 1)]
+      </p>
+     </td>
+    </tr>
+   </table>
+  </div>
+ </body>
+</html>
