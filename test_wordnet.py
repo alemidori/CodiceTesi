@@ -10,12 +10,37 @@ food_list50 = ['water', 'mellon', 'apple', 'pizza', 'chips', 'meat', 'chicken', 
                 'orange', 'lemon', 'banana', 'butter', 'oil', 'olive', 'grapes', 'plum', 'onion', 'hamburger',
                'bacon', 'steak', 'porridge', 'fish', 'chips', 'lobster', 'chips', 'candy','cream', 'soup']
 
-#coerente > 2
-electronics_list2 = ['phone', 'computer', 'apple']
 
-#astratta > 9
+#coerente > 2
+electronics_list2 = ['phone', 'computer']
+
+#non coerente > 5
+mix5 = ['chocolate', 'phone', 'politician', 'new jersey', 'show']
+
+#non coerente > 20
+mix20 = ['baker', 'mechanician', 'worker', 'clerk', 'politician', 'pilot', 'school', 'university', 'academy', 'exam',
+         'teacher', 'student', 'master', 'rejection', 'sadness', 'disappointment', 'anger', 'take',  'table',  'every',
+         'time', 'watch', 'tablet', 'camera', 'console', 'exam', 'pizza', 'chips', 'tofu', 'yogurt', 'cheese', 'bread',
+         'room', 'one', 'vegas', 'water', 'mellon', 'apple', 'sunshine', 'sun', 'moon', 'heart', 'earth']
+
+#astratta coerente > 9
 sentiment_list9 = ['love', 'friendship', 'sadness', 'disappointment', 'anger', 'consolation', 'deception', 'betrayal',
                   'fraternity']
+
+#astratta non coerente > 5
+abstract = ['love', 'immeasurable', 'power', 'straight', 'hystory']
+
+#solo termine
+solo = ['table']
+
+#family coerente > 10
+family = ['sister', 'mother', 'father', 'son', 'daughter', 'uncle', 'aunt', 'brother', 'grandmother', 'grandfather']
+
+#semi coerente > 10 - c'e' solo un elemento estraneo nella lista
+food_with_outsider10 = ['mellon', 'apple', 'pizza', 'chips', 'meat', 'chicken','potato', 'milk', 'camera']
+
+#semi coerente > 3
+food_with_outsider3 = ['mellon', 'apple', 'exam']
 
 
 jobs_list = ['baker', 'mechanician', 'worker', 'clerk', 'politician', 'pilot']
@@ -28,5 +53,6 @@ example_list = ['developer', 'web', 'software', 'politician', 'diiner', 'chinese
 
 a = ['take',  'table',  'every', 'time', 'show', 'room', 'one', 'vegas', 'place', 'bar']
 
+topic_exemple = ['love', 'enjoyed',  'perfect', 'hotel', 'dont' 'one', 'place view']
 
-print(wordnet.process(food_list10))
+print(wordnet.process(mix5))

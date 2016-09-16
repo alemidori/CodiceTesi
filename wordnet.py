@@ -8,8 +8,8 @@ def process(list_of_string):
     synsetslist = []
     terms_dict = {}
     set_string = []
-    terms_synsets_list = []
-    nouns_synset_list = []
+    #terms_synsets_list = []
+    #nouns_synset_list = []
     [set_string.append(item) for item in list_of_string if item not in set_string]
     if len(set_string) > 1:
         for term in set_string:
@@ -17,7 +17,7 @@ def process(list_of_string):
                 for synset in wn.synsets(term):
                     if synset.pos() == 'n':
                         synsetslist.append(synset) # inserisco in un'unica lista tutti i synset dei termini per poi confrontarli
-
+        print(synsetslist)
 
         # [terms_synsets_list.append(synset.lemmas()[0].name()) for synset in synsetslist]
         # returned_list = tag_terms(terms_synsets_list)
@@ -46,16 +46,16 @@ def process(list_of_string):
                 terms_dict[score] = [synsetslist[i], synsetslist[j], lcs]
                 lcs_list.append(lcs)
 
-        more_similar_couple = {}
+        more_similar_couples = {}
 
         for key in terms_dict.keys():
-            if key >= 0.15:
-                more_similar_couple[key] = terms_dict[key]
+            if key >= 0.3:
+                more_similar_couples[key] = terms_dict[key]
 
-        if more_similar_couple:
+        if len(more_similar_couples) > 1:
             lcs_list.clear()
-            for key in more_similar_couple.keys():
-                lcs_list.append(more_similar_couple[key][2])
+            for key in more_similar_couples.keys():
+                lcs_list.append(more_similar_couples[key][2])
 
         else:
             lcs_list.clear()
@@ -68,19 +68,31 @@ def process(list_of_string):
         new_list_of_string = []
 
         lcs_set = sum(lcs_set, [])
+        print(lcs_set)
+
         for synset in lcs_set:
+            #evito di considerare termini come: entita', entita' fisica ecc, quindi troppo generici
+            #verifico dunque il livello di profondita' (0 = entity)
+            if synset.max_depth() < 3:
+                print(str(synset)+" --> "+str(synset.max_depth()))
+                print(str(synset)+" troppo generica")
+                lcs_set.remove(synset)
+
+        for synset in lcs_set:
+            print(synset)
             new_list_of_string.append(synset.lemmas()[0].name())
 
         if new_list_of_string:
             final.clear()
             [final.append(item) for item in new_list_of_string if item not in final]
 
-        if more_similar_couple:
+        if len(more_similar_couples) > 1:
             process(new_list_of_string)
 
     #se la lista iniziale e' composta da un solo termine, stampa quello
     else:
         final.append(list_of_string)
+
 
     return final
 
