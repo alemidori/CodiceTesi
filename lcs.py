@@ -1,23 +1,19 @@
 from nltk.corpus import wordnet as wn
+import strings_to_synsets
 from nltk import tag
 
 final = []
 
 def process(list_of_string):
     lcs_list = []
-    synsetslist = []
     terms_dict = {}
     set_string = []
     #terms_synsets_list = []
     #nouns_synset_list = []
     [set_string.append(item) for item in list_of_string if item not in set_string]
+
     if len(set_string) > 1:
-        for term in set_string:
-            if len(wn.synsets(term)) <= 10: #scarto i termini che hanno piu' di 10 significati
-                for synset in wn.synsets(term):
-                    if synset.pos() == 'n':
-                        synsetslist.append(synset) # inserisco in un'unica lista tutti i synset dei termini per poi confrontarli
-        print(synsetslist)
+        synsetslist = strings_to_synsets.get_noun_synsets(set_string)
 
         # [terms_synsets_list.append(synset.lemmas()[0].name()) for synset in synsetslist]
         # returned_list = tag_terms(terms_synsets_list)
@@ -70,13 +66,15 @@ def process(list_of_string):
         lcs_set = sum(lcs_set, [])
         print(lcs_set)
 
-        for synset in lcs_set:
+        setforremove = lcs_set
+        for synset in setforremove:
             #evito di considerare termini come: entita', entita' fisica ecc, quindi troppo generici
             #verifico dunque il livello di profondita' (0 = entity)
             if synset.max_depth() < 3:
                 print(str(synset)+" --> "+str(synset.max_depth()))
                 print(str(synset)+" troppo generica")
                 lcs_set.remove(synset)
+
 
         for synset in lcs_set:
             print(synset)
@@ -105,6 +103,8 @@ def tag_terms(list_of_terms):
 
     print(list_nouns)
     return list_nouns
+
+
 
 #non posso calcolare la path similarity indifferentemente tra sostantivi, verbi, aggettivi e avverbi
 #quindi una volta taggati i termini con tag_terms procedo al calcolo della similarità usando path similarity solo tra nouns

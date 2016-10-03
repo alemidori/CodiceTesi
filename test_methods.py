@@ -1,4 +1,6 @@
-import wordnet
+import lcs
+import relations
+import graph_relations
 
 #coerente > 10
 food_list10 = ['water', 'mellon', 'apple', 'pizza', 'chips', 'meat', 'chicken', 'potato', 'milk', 'chocolate']
@@ -55,4 +57,7 @@ a = ['take',  'table',  'every', 'time', 'show', 'room', 'one', 'vegas', 'place'
 
 topic_exemple = ['love', 'enjoyed',  'perfect', 'hotel', 'dont' 'one', 'place view']
 
-print(wordnet.process(mix5))
+#print(lcs.process(example_list)) #test lcs
+#print(relations.process(food_list10)) #test relations
+print(graph_relations.process(mix5)) #test graph_relations
+
