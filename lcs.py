@@ -67,6 +67,7 @@ def process(list_of_string):
         print(lcs_set)
 
         setforremove = lcs_set
+
         for synset in setforremove:
             #evito di considerare termini come: entita', entita' fisica ecc, quindi troppo generici
             #verifico dunque il livello di profondita' (0 = entity)
