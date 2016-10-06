@@ -2,7 +2,7 @@ import textrazor
 
 textrazor.api_key = "d62cbd9970ef9077fda7db949108f528810bd5ea6047c832eea33c8c"
 
-client = textrazor.TextRazor(extractors=["words", "entities", "entailments", "relations"])
+client = textrazor.TextRazor(extractors=["words", "entities", "entailments", "relations", "topics"])
 
 def process(string):
     final = []
@@ -17,7 +17,6 @@ def process(string):
             typeslist.append(string_type)
             #print(string_type)
 
-
     #print(typeslist)
     flat = sum(typeslist, [])
     flat = [elem for elem in flat if elem]
@@ -27,5 +26,9 @@ def process(string):
     typesstring = " ".join(typesset)
     responseontypes = client.analyze(typesstring)
 
+    for topic in responseontypes.topics():
+        if topic.score == 1:
+            print(str(topic.score) + " "+str(topic.label))
+            final.append(topic.label)
 
     return final

@@ -7,9 +7,8 @@ from nltk.corpus import wordnet as wn
 final_list = []
 
 def process(list_of_string):
-    set_string = []
+    set_string = list(set(list_of_string))
     final_string = []
-    [set_string.append(item) for item in list_of_string if item not in set_string]
     # uso la funzione di lcs string_to_synsets(considerando anche aggettivi avverbi e verbi)
     # per ottenere i synsets dalla lista dei termini in input
     synsetslist = strings_to_synsets.get_all_synsets(set_string)

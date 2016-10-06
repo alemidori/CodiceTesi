@@ -59,11 +59,10 @@ a = ['take',  'table',  'every', 'time', 'show', 'room', 'one', 'vegas', 'place'
 topic_exemple = ['love', 'enjoyed',  'perfect', 'hotel', 'dont' 'one', 'place view']
 
 #print(lcs.process(example_list)) #test lcs
-#print(relations.process(food_list10)) #test relations
+print(relations.process(food_list50)) #test relations
 
 #per liste molto lunghe nel graph_relations e' bene aumentare leggermente il parametro della similarita' per
 #ridurre il numero di termini in output e quindi prendere un gruppo minore di nodi del grafo
 #print(graph_relations.process(mix20, 0.2)) #test graph_relations
-
-print(supervised.process(" ".join(food_list10)))
+#print(supervised.process(" ".join(mix20)))
 
