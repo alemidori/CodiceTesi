@@ -7,10 +7,9 @@ final = []
 def process(list_of_string):
     lcs_list = []
     terms_dict = {}
-    set_string = []
+    set_string = list(set(list_of_string))
     #terms_synsets_list = []
     #nouns_synset_list = []
-    [set_string.append(item) for item in list_of_string if item not in set_string]
 
     if len(set_string) > 1:
         synsetslist = strings_to_synsets.get_noun_synsets(set_string)
@@ -58,8 +57,7 @@ def process(list_of_string):
             for key in terms_dict.keys():
                 lcs_list.append(terms_dict[key][2])
 
-        lcs_set = []
-        [lcs_set.append(item) for item in lcs_list if item not in lcs_set]
+        lcs_set = list(set(lcs_list))
 
         new_list_of_string = []
 
@@ -82,8 +80,9 @@ def process(list_of_string):
             new_list_of_string.append(synset.lemmas()[0].name())
 
         if new_list_of_string:
+            global final
             final.clear()
-            [final.append(item) for item in new_list_of_string if item not in final]
+            final = list(set(new_list_of_string))
 
         if len(more_similar_couples) > 1:
             process(new_list_of_string)

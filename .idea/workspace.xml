@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="09b82850-d871-4cce-a71f-77385f5af7f8" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph_relations.py" afterPath="$PROJECT_DIR$/graph_relations.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lcs.py" afterPath="$PROJECT_DIR$/lcs.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/relations.py" afterPath="$PROJECT_DIR$/relations.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supervised.py" afterPath="$PROJECT_DIR$/supervised.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_methods.py" afterPath="$PROJECT_DIR$/test_methods.py" />
     </list>
     <ignored path="Codice.iws" />
@@ -53,12 +54,12 @@
       <file leaf-file-name="lcs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lcs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="583">
+              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
-                <element signature="e#189#213#0" expanded="false" />
-                <element signature="e#433#515#0" expanded="false" />
+                <element signature="e#212#236#0" expanded="false" />
+                <element signature="e#373#455#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -74,13 +75,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="relations.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="relations.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/relations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+            <state relative-caret-position="163">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#0#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -89,11 +90,21 @@
       <file leaf-file-name="graph_relations.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph_relations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
+            <state relative-caret-position="330">
               <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="supervised.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/supervised.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="298">
+              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,7 +120,7 @@
         <entry file="file://$PROJECT_DIR$/test_methods.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="298">
-              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+              <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -139,15 +150,15 @@
         <option value="$PROJECT_DIR$/htmls/mysite/app/models.py" />
         <option value="$PROJECT_DIR$/htmls/mysite/mysite/settings.py" />
         <option value="$PROJECT_DIR$/test_wordnet.py" />
-        <option value="$PROJECT_DIR$/supervised.py" />
         <option value="$PROJECT_DIR$/wordnet.py" />
         <option value="$PROJECT_DIR$/graph1.py" />
         <option value="$PROJECT_DIR$/string_to_synsets.py" />
-        <option value="$PROJECT_DIR$/relations.py" />
         <option value="$PROJECT_DIR$/strings_to_synsets.py" />
-        <option value="$PROJECT_DIR$/lcs.py" />
-        <option value="$PROJECT_DIR$/test_methods.py" />
         <option value="$PROJECT_DIR$/graph_relations.py" />
+        <option value="$PROJECT_DIR$/relations.py" />
+        <option value="$PROJECT_DIR$/test_methods.py" />
+        <option value="$PROJECT_DIR$/lcs.py" />
+        <option value="$PROJECT_DIR$/supervised.py" />
       </list>
     </option>
   </component>
@@ -181,8 +192,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,6 +212,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -276,6 +287,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Codice" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/graph_relations.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="supervised" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Codice" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/supervised.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -414,18 +442,20 @@
       <option name="USE_KEYWORD" value="false" />
       <method />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.test_methods" />
       <item index="1" class="java.lang.String" itemvalue="Python.wordnet" />
       <item index="2" class="java.lang.String" itemvalue="Python.graph1" />
       <item index="3" class="java.lang.String" itemvalue="Python.graph_relations" />
+      <item index="4" class="java.lang.String" itemvalue="Python.supervised" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.test_methods" />
-        <item index="1" class="java.lang.String" itemvalue="Python.graph_relations" />
-        <item index="2" class="java.lang.String" itemvalue="Python.graph1" />
-        <item index="3" class="java.lang.String" itemvalue="Python.wordnet" />
+        <item index="1" class="java.lang.String" itemvalue="Python.supervised" />
+        <item index="2" class="java.lang.String" itemvalue="Python.graph_relations" />
+        <item index="3" class="java.lang.String" itemvalue="Python.graph1" />
+        <item index="4" class="java.lang.String" itemvalue="Python.wordnet" />
       </list>
     </recent_temporary>
   </component>
@@ -481,7 +511,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -530,8 +560,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#189#213#0" expanded="false" />
-            <element signature="e#433#515#0" expanded="false" />
+            <element signature="e#212#236#0" expanded="false" />
+            <element signature="e#373#455#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -600,8 +630,8 @@
           <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#189#213#0" expanded="false" />
-            <element signature="e#433#515#0" expanded="false" />
+            <element signature="e#212#236#0" expanded="false" />
+            <element signature="e#373#455#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -799,28 +829,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#31#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/supervised.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lcs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-            <element signature="e#189#213#0" expanded="false" />
-            <element signature="e#433#515#0" expanded="false" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/graph.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/strings_to_synsets.py">
@@ -831,24 +847,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/relations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_methods.py">
+    <entry file="file://$PROJECT_DIR$/lcs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+        <state relative-caret-position="583">
+          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#212#236#0" expanded="false" />
+            <element signature="e#373#455#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph_relations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
+        <state relative-caret-position="330">
           <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
@@ -856,13 +879,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/relations.py">
+    <entry file="file://$PROJECT_DIR$/test_methods.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+        <state relative-caret-position="298">
+          <caret line="67" column="48" selection-start-line="67" selection-start-column="48" selection-end-line="67" selection-end-column="48" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervised.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
