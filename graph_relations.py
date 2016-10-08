@@ -28,7 +28,7 @@ def process(strings, param_similarity):
             print(str(synset_centr)+str(degree_centrality_dict[synset_centr]))
             synset_to_strings.append(synset_centr.lemmas()[0].name())
 
-    final = set(synset_to_strings)
+    final = list(set(synset_to_strings))
     #print(G.number_of_nodes())
     #print(G.number_of_edges())
 

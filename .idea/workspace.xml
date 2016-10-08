@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09b82850-d871-4cce-a71f-77385f5af7f8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph.png" afterPath="$PROJECT_DIR$/graph.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph_relations.py" afterPath="$PROJECT_DIR$/graph_relations.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/relations.py" afterPath="$PROJECT_DIR$/relations.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/supervised.py" afterPath="$PROJECT_DIR$/supervised.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_methods.py" afterPath="$PROJECT_DIR$/test_methods.py" />
     </list>
     <ignored path="Codice.iws" />
@@ -53,8 +54,8 @@
       <file leaf-file-name="lcs.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lcs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+            <state relative-caret-position="60">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
               <folding>
                 <element signature="e#0#37#0" expanded="true" />
                 <element signature="e#212#236#0" expanded="false" />
@@ -74,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="relations.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="relations.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/relations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+            <state relative-caret-position="810">
+              <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -89,8 +90,8 @@
       <file leaf-file-name="graph_relations.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph_relations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="405">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -101,8 +102,8 @@
       <file leaf-file-name="supervised.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/supervised.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
+            <state relative-caret-position="270">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,8 +119,20 @@
       <file leaf-file-name="test_methods.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_methods.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="61" column="53" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
+            <state relative-caret-position="367">
+              <caret line="58" column="84" selection-start-line="58" selection-start-column="84" selection-end-line="58" selection-end-column="84" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="scopus_csvreader.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scopus_csvreader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -153,11 +166,12 @@
         <option value="$PROJECT_DIR$/graph1.py" />
         <option value="$PROJECT_DIR$/string_to_synsets.py" />
         <option value="$PROJECT_DIR$/strings_to_synsets.py" />
-        <option value="$PROJECT_DIR$/graph_relations.py" />
         <option value="$PROJECT_DIR$/lcs.py" />
         <option value="$PROJECT_DIR$/supervised.py" />
         <option value="$PROJECT_DIR$/relations.py" />
+        <option value="$PROJECT_DIR$/graph_relations.py" />
         <option value="$PROJECT_DIR$/test_methods.py" />
+        <option value="$PROJECT_DIR$/scopus_csvreader.py" />
       </list>
     </option>
   </component>
@@ -191,7 +205,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -213,6 +226,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -221,7 +235,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="SearchEverywhereHistoryKey" value="rela&#9;null&#9;null&#10;Question&#9;null&#9;null" />
   </component>
-  <component name="RunManager" selected="Python.test_methods">
+  <component name="RunManager" selected="Python.scopus_csvreader">
     <configuration default="false" name="test_methods" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -235,23 +249,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Codice" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_methods.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="wordnet" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Codice" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lcs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -303,6 +300,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Codice" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/supervised.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="scopus_csvreader" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Codice" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scopus_csvreader.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -443,18 +457,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.test_methods" />
-      <item index="1" class="java.lang.String" itemvalue="Python.wordnet" />
-      <item index="2" class="java.lang.String" itemvalue="Python.graph1" />
-      <item index="3" class="java.lang.String" itemvalue="Python.graph_relations" />
-      <item index="4" class="java.lang.String" itemvalue="Python.supervised" />
+      <item index="1" class="java.lang.String" itemvalue="Python.graph1" />
+      <item index="2" class="java.lang.String" itemvalue="Python.graph_relations" />
+      <item index="3" class="java.lang.String" itemvalue="Python.supervised" />
+      <item index="4" class="java.lang.String" itemvalue="Python.scopus_csvreader" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.test_methods" />
-        <item index="1" class="java.lang.String" itemvalue="Python.supervised" />
-        <item index="2" class="java.lang.String" itemvalue="Python.graph_relations" />
-        <item index="3" class="java.lang.String" itemvalue="Python.graph1" />
-        <item index="4" class="java.lang.String" itemvalue="Python.wordnet" />
+        <item index="0" class="java.lang.String" itemvalue="Python.scopus_csvreader" />
+        <item index="1" class="java.lang.String" itemvalue="Python.test_methods" />
+        <item index="2" class="java.lang.String" itemvalue="Python.supervised" />
+        <item index="3" class="java.lang.String" itemvalue="Python.graph_relations" />
+        <item index="4" class="java.lang.String" itemvalue="Python.graph1" />
       </list>
     </recent_temporary>
   </component>
@@ -515,16 +529,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/htmls/mysite/polls/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -835,45 +839,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lcs.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="93" column="0" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+        <state relative-caret-position="60">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
             <element signature="e#0#37#0" expanded="true" />
             <element signature="e#212#236#0" expanded="false" />
             <element signature="e#373#455#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/graph_relations.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/supervised.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test_methods.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="61" column="53" selection-start-line="61" selection-start-column="53" selection-end-line="61" selection-end-column="53" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -888,10 +859,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/relations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="47" column="38" selection-start-line="47" selection-start-column="38" selection-end-line="47" selection-end-column="38" />
+        <state relative-caret-position="810">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/supervised.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph_relations.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#21#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_methods.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="58" column="84" selection-start-line="58" selection-start-column="84" selection-end-line="58" selection-end-column="84" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/graph.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scopus_csvreader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>

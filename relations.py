@@ -1,5 +1,6 @@
 from __future__ import division
 import random
+import lcs
 import strings_to_synsets
 import numpy as np
 from nltk.corpus import wordnet as wn
