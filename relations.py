@@ -1,4 +1,5 @@
 from __future__ import division
+import collections
 import random
 import lcs
 import strings_to_synsets
@@ -7,8 +8,13 @@ from nltk.corpus import wordnet as wn
 
 final_list = []
 
-def process(list_of_string):
-    set_string = list(set(list_of_string))
+def process(list_of_string, similarity):
+    print("\n\n*************INIZIO METODO RELATIONS")
+    similarity = None
+    flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
+    flatlist = flatten(list_of_string)
+
+    set_string = list(set(flatlist))
     final_string = []
     # uso la funzione di lcs string_to_synsets(considerando anche aggettivi avverbi e verbi)
     # per ottenere i synsets dalla lista dei termini in input
@@ -56,4 +62,9 @@ def check_relation(sy1, sy2):
             final_list.append(sy1) #appendi entrambi alla lista
             final_list.append(sy2)
     return
+
+
+
+
+
 

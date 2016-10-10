@@ -4,7 +4,9 @@ from nltk import tag
 
 final = []
 
-def process(list_of_string):
+def process(list_of_string, similarity):
+
+    print("\n\n*************INIZIO METODO LCS")
     lcs_list = []
     terms_dict = {}
     set_string = list(set(list_of_string))
@@ -44,7 +46,7 @@ def process(list_of_string):
         more_similar_couples = {}
 
         for key in terms_dict.keys():
-            if key >= 0.3:
+            if key >= similarity:
                 more_similar_couples[key] = terms_dict[key]
 
         if len(more_similar_couples) > 1:
@@ -57,12 +59,11 @@ def process(list_of_string):
             for key in terms_dict.keys():
                 lcs_list.append(terms_dict[key][2])
 
+        lcs_list = sum(lcs_list, [])
         lcs_set = list(set(lcs_list))
+        print(lcs_set)
 
         new_list_of_string = []
-
-        lcs_set = sum(lcs_set, [])
-        print(lcs_set)
 
         setforremove = lcs_set
 
@@ -85,7 +86,7 @@ def process(list_of_string):
             final = list(set(new_list_of_string))
 
         if len(more_similar_couples) > 1:
-            process(new_list_of_string)
+            process(new_list_of_string , similarity)
 
     #se la lista iniziale e' composta da un solo termine, stampa quello
     else:

@@ -4,9 +4,11 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 def process(strings, param_similarity):
+    print("\n\n*************INIZIO METODO GRAPH_RELATIONS")
+    flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
     synset_to_strings = []
     synsetslist = strings_to_synsets.get_all_synsets(strings)
-    print(len(synsetslist))
+    print("I synset sono: "+str(len(synsetslist)))
     G = nx.Graph() #creo il grafo
 
     for synset in synsetslist:
@@ -20,15 +22,21 @@ def process(strings, param_similarity):
                 G.add_edge(G.nodes()[i], G.nodes()[j], weight=score)
 
     degree_centrality_dict = nx.degree_centrality(G)
-    percentile = np.percentile(list(degree_centrality_dict.values()), 90)
-    print(percentile)
+    print("Degree centrality dict: " +str(degree_centrality_dict))
 
-    for synset_centr in degree_centrality_dict.keys():
-        if degree_centrality_dict[synset_centr] > percentile: #se sono abbastanza centrali
-            print(str(synset_centr)+str(degree_centrality_dict[synset_centr]))
-            synset_to_strings.append(synset_centr.lemmas()[0].name())
+    if sum(degree_centrality_dict.values()) != 0.0:
+        percentile = np.percentile(list(degree_centrality_dict.values()), 90)
 
-    final = list(set(synset_to_strings))
+        for synset_centr in degree_centrality_dict.keys():
+            if degree_centrality_dict[synset_centr] > percentile: #se sono abbastanza centrali
+                print(str(synset_centr)+str(degree_centrality_dict[synset_centr]))
+                synset_to_strings.append(synset_centr.lemmas()[0].name())
+    else:
+        synset_to_strings.append([el.lemmas()[0].name() for el in degree_centrality_dict.keys()])
+
+    print("Nuova lista di termini dai synset: "+str(synset_to_strings))
+
+    final = list(set(flatten(synset_to_strings)))
     #print(G.number_of_nodes())
     #print(G.number_of_edges())
 

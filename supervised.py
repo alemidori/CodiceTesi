@@ -4,7 +4,9 @@ textrazor.api_key = "d62cbd9970ef9077fda7db949108f528810bd5ea6047c832eea33c8c"
 
 client = textrazor.TextRazor(extractors=["words", "entities", "entailments", "relations", "topics"])
 
-def process(string):
+def process(stringlist, similarity):
+    similarity = None
+    string = " ".join(stringlist)
     final = []
     typeslist = []
     print(string)
