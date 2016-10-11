@@ -21,8 +21,8 @@ summary2 = ['relations', 'lcs', 'graph_relations']
 description1 = ['graph_relations', 'lcs', 'relations']
 description2 = ['lcs', 'graph_relations', 'relations']
 
-#param Composition > stringlist, sequence, similarity
-composition = Composition(test_lists.abstract, summary1, 0.2)
+#param Composition > stringlist, sequenza, similarita' minima per coppie di termini, numero di synset massimi per un termine
+composition = Composition(test_lists.sentiment_list9, summary2, 0.3, 20)
 
 
 

@@ -1,11 +1,10 @@
 from nltk.corpus import wordnet as wn
 import strings_to_synsets
 from nltk import tag
-from flatlist import flat
 
 final = []
 
-def process(list_of_string, similarity):
+def process(list_of_string, similarity, num_synset):
 
     print("\n\n*************INIZIO METODO LCS")
     lcs_list = []
@@ -16,7 +15,7 @@ def process(list_of_string, similarity):
     #nouns_synset_list = []
 
     if len(set_string) > 1:
-        synsetslist = strings_to_synsets.get_noun_synsets(set_string)
+        synsetslist = strings_to_synsets.get_noun_synsets(set_string, num_synset)
 
         # [terms_synsets_list.append(synset.lemmas()[0].name()) for synset in synsetslist]
         # returned_list = tag_terms(terms_synsets_list)
@@ -89,7 +88,7 @@ def process(list_of_string, similarity):
 
         if len(more_similar_couples) > 2:
             print('\n' + str(final))
-            process(new_list_of_string, similarity)
+            process(new_list_of_string, similarity, num_synset)
 
 
     #se la lista iniziale e' composta da un solo termine, stampa quello

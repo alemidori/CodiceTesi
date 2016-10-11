@@ -1,7 +1,6 @@
 from __future__ import division
 import collections
 import random
-from flatlist import flat
 import lcs
 import strings_to_synsets
 import numpy as np
@@ -9,7 +8,7 @@ from nltk.corpus import wordnet as wn
 
 final_list = []
 
-def process(list_of_string, similarity):
+def process(list_of_string, similarity, num_synset):
     print("\n\n*************INIZIO METODO RELATIONS")
     similarity = None
     flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
@@ -17,7 +16,7 @@ def process(list_of_string, similarity):
     final_string = []
     # uso la funzione di lcs string_to_synsets(considerando anche aggettivi avverbi e verbi)
     # per ottenere i synsets dalla lista dei termini in input
-    synsetslist = strings_to_synsets.get_all_synsets(set_string)
+    synsetslist = strings_to_synsets.get_all_synsets(set_string, num_synset)
     print(synsetslist)
 
     for i in range(0, (len(synsetslist) - 1)):

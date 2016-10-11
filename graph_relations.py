@@ -1,14 +1,13 @@
 import networkx as nx
-from flatlist import flat
 import strings_to_synsets
 import matplotlib.pyplot as plt
 import numpy as np
 
-def process(strings, param_similarity):
+def process(strings, param_similarity, num_synset):
     flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
     print("\n\n*************INIZIO METODO GRAPH_RELATIONS")
     synset_to_strings = []
-    synsetslist = strings_to_synsets.get_all_synsets(strings)
+    synsetslist = strings_to_synsets.get_all_synsets(strings, num_synset)
     print("I synset sono: "+str(len(synsetslist)))
     print(synsetslist)
     G = nx.Graph() #creo il grafo
@@ -33,7 +32,12 @@ def process(strings, param_similarity):
             if degree_centrality_dict[synset_centr] > percentile: #se sono abbastanza centrali
                 print(str(synset_centr)+str(degree_centrality_dict[synset_centr]))
                 synset_to_strings.append(synset_centr.lemmas()[0].name())
+        if not synset_to_strings:
+            print("Termini con centralità inferiore al percentile:")
+            synset_to_strings.append([el.lemmas()[0].name() for el in degree_centrality_dict.keys()])
+
     else:
+        print("Termini con centralità = 0.0:")
         synset_to_strings.append([el.lemmas()[0].name() for el in degree_centrality_dict.keys()])
 
     final = list(set(flatten(synset_to_strings)))
