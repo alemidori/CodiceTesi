@@ -1,6 +1,7 @@
 from __future__ import division
 import collections
 import random
+from flatlist import flat
 import lcs
 import strings_to_synsets
 import numpy as np
@@ -12,13 +13,12 @@ def process(list_of_string, similarity):
     print("\n\n*************INIZIO METODO RELATIONS")
     similarity = None
     flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
-    flatlist = flatten(list_of_string)
-
-    set_string = list(set(flatlist))
+    set_string = list(set(flatten(list_of_string)))
     final_string = []
     # uso la funzione di lcs string_to_synsets(considerando anche aggettivi avverbi e verbi)
     # per ottenere i synsets dalla lista dei termini in input
     synsetslist = strings_to_synsets.get_all_synsets(set_string)
+    print(synsetslist)
 
     for i in range(0, (len(synsetslist) - 1)):
         for j in range(i + 1, (len(synsetslist) - 1)):
@@ -32,6 +32,7 @@ def process(list_of_string, similarity):
     final_string_set = []
     [final_string_set.append(item) for item in final_string if item not in final_string_set]
 
+    print('\n' + str(final_string_set))
     return final_string_set
 
 

@@ -15,11 +15,9 @@ class Composition:
                 result = relations.process(result, similarity)
             elif item == "graph_relations":
                 result = graph_relations.process(result, similarity)
-            elif item == "supervised":
-                result = supervised.process(result, similarity)
             else:
                 print("Uno o più elementi inesistenti nella lista 'sequence'.")
-        print(result)
+        print("Risultato finale: "+str(result))
 
         return
 

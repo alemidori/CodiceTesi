@@ -1,14 +1,16 @@
 import networkx as nx
+from flatlist import flat
 import strings_to_synsets
 import matplotlib.pyplot as plt
 import numpy as np
 
 def process(strings, param_similarity):
-    print("\n\n*************INIZIO METODO GRAPH_RELATIONS")
     flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
+    print("\n\n*************INIZIO METODO GRAPH_RELATIONS")
     synset_to_strings = []
     synsetslist = strings_to_synsets.get_all_synsets(strings)
     print("I synset sono: "+str(len(synsetslist)))
+    print(synsetslist)
     G = nx.Graph() #creo il grafo
 
     for synset in synsetslist:
@@ -34,9 +36,8 @@ def process(strings, param_similarity):
     else:
         synset_to_strings.append([el.lemmas()[0].name() for el in degree_centrality_dict.keys()])
 
-    print("Nuova lista di termini dai synset: "+str(synset_to_strings))
-
     final = list(set(flatten(synset_to_strings)))
+    print("Nuova lista di termini dai synset: " + str(final))
     #print(G.number_of_nodes())
     #print(G.number_of_edges())
 
@@ -48,5 +49,6 @@ def process(strings, param_similarity):
     # nx.draw_networkx_edge_labels(G, pos, labels=edge_labels)
     plt.savefig('graph.png')
 
+    print('\n' + str(final))
     return final
 

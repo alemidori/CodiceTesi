@@ -1,6 +1,7 @@
 from nltk.corpus import wordnet as wn
 import strings_to_synsets
 from nltk import tag
+from flatlist import flat
 
 final = []
 
@@ -9,7 +10,8 @@ def process(list_of_string, similarity):
     print("\n\n*************INIZIO METODO LCS")
     lcs_list = []
     terms_dict = {}
-    set_string = list(set(list_of_string))
+    flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
+    set_string = list(set(flatten(list_of_string)))
     #terms_synsets_list = []
     #nouns_synset_list = []
 
@@ -34,7 +36,7 @@ def process(list_of_string, similarity):
         #         #dict: chiave: score, valore: [termine1, termine2, lcs]
         #         terms_dict[score] = [nouns_synset_list[i], nouns_synset_list[j], lcs]
         #         lcs_list.append(lcs)
-
+        print(synsetslist)
         for i in range(0, (len(synsetslist) - 1)):
             for j in range(i+1, (len(synsetslist)-1)):
                 score = synsetslist[i].path_similarity(synsetslist[j])
@@ -49,7 +51,7 @@ def process(list_of_string, similarity):
             if key >= similarity:
                 more_similar_couples[key] = terms_dict[key]
 
-        if len(more_similar_couples) > 1:
+        if len(more_similar_couples) > 2:
             lcs_list.clear()
             for key in more_similar_couples.keys():
                 lcs_list.append(more_similar_couples[key][2])
@@ -61,7 +63,7 @@ def process(list_of_string, similarity):
 
         lcs_list = sum(lcs_list, [])
         lcs_set = list(set(lcs_list))
-        print(lcs_set)
+        #print(lcs_set)
 
         new_list_of_string = []
 
@@ -77,7 +79,7 @@ def process(list_of_string, similarity):
 
 
         for synset in lcs_set:
-            print(synset)
+            #print(synset)
             new_list_of_string.append(synset.lemmas()[0].name())
 
         if new_list_of_string:
@@ -85,14 +87,16 @@ def process(list_of_string, similarity):
             final.clear()
             final = list(set(new_list_of_string))
 
-        if len(more_similar_couples) > 1:
-            process(new_list_of_string , similarity)
+        if len(more_similar_couples) > 2:
+            print('\n' + str(final))
+            process(new_list_of_string, similarity)
+
 
     #se la lista iniziale e' composta da un solo termine, stampa quello
     else:
         final.append(list_of_string)
 
-
+    print('\n' + str(final))
     return final
 
 
@@ -104,7 +108,6 @@ def tag_terms(list_of_terms):
 
     print(list_nouns)
     return list_nouns
-
 
 
 #non posso calcolare la path similarity indifferentemente tra sostantivi, verbi, aggettivi e avverbi
