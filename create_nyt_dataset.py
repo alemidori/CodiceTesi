@@ -1,7 +1,5 @@
 import pymongo
 from string import punctuation
-from itertools import chain
-from collections import Counter
 import datetime
 import processing
 
@@ -9,12 +7,11 @@ client = pymongo.MongoClient()
 db_nyt = client['nyt_dataset']
 
 tokens_coll = db_nyt['tokens']
-tokens_filtered = db_nyt['filtered_tokens']
+result_keywords = db_nyt['result_keywords']
+
+list_dict = []
 
 def filter_date():
-    list_dict = []
-    normalized_tokens = []
-    tokens = []
 
     cursor = tokens_coll.find({'$and':
                                    [{'keywords': {'$gt': []}},
@@ -26,23 +23,33 @@ def filter_date():
         elemdict = {}
         tokens = el['tokens']
         tokens_norm = [t.lower() for t in tokens]
-        #print(tokens_norm)
-        #print(tokens)
         keywords_listdict = el['keywords']
         for k in keywords_listdict:
             keywords.append([k for k in ''.join(c for c in k['value'] if c not in punctuation).lower().split()])
 
         flat = sum(keywords, [])
         flat_nostopwords = processing.remove_stopwords(flat)
-        #print(flat_nostopwords)
         elemdict['text'] = el['text']
         elemdict['tokens'] = tokens_norm
         elemdict['keywords'] = flat_nostopwords
 
         list_dict.append(elemdict)
 
-    for item in list_dict[:10]:
-        print(item)
     return
 
-filter_date()
+def create_filtered_nyt():
+    filter_date()
+    for item in list_dict:
+        result_keywords.insert_one({'text': item['text'], 'tokens': item['tokens'] , 'text_keywords': item['keywords']})
+    return
+
+def get_tokens():
+    token_list = []
+    cursor = result_keywords.find(None, {"tokens": 1, '_id': 0})  # metto None perche' sto
+    # facendo una selezione su niente quindi voglio che mi restituisca tutto
+    for element in cursor:
+        token_list.append(element['tokens'])  #e' una lista di liste in cui ogni lista interna ha i token
+        # riferiti ad ogni singolo paragrafo
+    return token_list
+
+create_filtered_nyt()
