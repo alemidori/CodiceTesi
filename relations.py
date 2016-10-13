@@ -17,6 +17,7 @@ def process(list_of_string, similarity, num_synset):
     # uso la funzione di lcs string_to_synsets(considerando anche aggettivi avverbi e verbi)
     # per ottenere i synsets dalla lista dei termini in input
     synsetslist = strings_to_synsets.get_all_synsets(set_string, num_synset)
+    print("I synset sono: " + str(len(synsetslist)))
     print(synsetslist)
 
     for i in range(0, (len(synsetslist) - 1)):
@@ -31,7 +32,9 @@ def process(list_of_string, similarity, num_synset):
     final_string_set = []
     [final_string_set.append(item) for item in final_string if item not in final_string_set]
 
-    print('\n' + str(final_string_set))
+    print('\n'+str(len(final_string_set))+" elementi nella lista.\n" + str(final_string_set))
+    if not final_string_set:
+        print("Sono stati scartati tutti i termini perché aventi più synset del parametro impostato. ("+ str(num_synset)+")")
     return final_string_set
 
 

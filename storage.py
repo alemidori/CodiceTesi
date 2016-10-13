@@ -2,16 +2,22 @@
 a questi utlimi'''
 
 import pymongo
+from string import punctuation
 from itertools import chain
 from collections import Counter
+import datetime
 
 client = pymongo.MongoClient()
 db = client['stories'] #database
+db_nyt = client['nyt_dataset']
 
+tokens_coll = db_nyt['tokens']
+tokens_filtered = db['filtered_tokens']
 paragraphs_coll = db['paragraphs'] #collezione paragrafi con relativi tokens, racconto di riferimento e posizione nel racconto
 terms_ref_coll = db['terms_ref'] #collezione dei token con i rispettivi termini originali dai quali provengono
 topics_terms = db['topics_terms'] #collezione primi 50 termini restituiti dal modello lda per ogni topic
 term_frequency_corpus = db['term_frequency_corpus'] #collezione termini di tutto il corpus e relative occorrenze
+
 
 
 #prende 3 parametri: l'id del racconto originale nel quale il paragrafo si trova

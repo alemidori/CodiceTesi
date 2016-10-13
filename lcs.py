@@ -35,6 +35,7 @@ def process(list_of_string, similarity, num_synset):
         #         #dict: chiave: score, valore: [termine1, termine2, lcs]
         #         terms_dict[score] = [nouns_synset_list[i], nouns_synset_list[j], lcs]
         #         lcs_list.append(lcs)
+        print("I synset sono: " + str(len(synsetslist)))
         print(synsetslist)
         for i in range(0, (len(synsetslist) - 1)):
             for j in range(i+1, (len(synsetslist)-1)):
@@ -95,7 +96,7 @@ def process(list_of_string, similarity, num_synset):
     else:
         final.append(list_of_string)
 
-    print('\n' + str(final))
+    print('\n' + str(len(final)) + " elementi nella lista.\n" + str(flatten(final)))
     return final
 
 

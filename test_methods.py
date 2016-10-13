@@ -16,13 +16,17 @@ import sys
 #print(lcs.process(['pasta', 'vegetable', 'yogurt', 'meat', 'cheese', 'butter', 'chocolate', 'beef', 'seafood', 'bread', 'pork', 'fish']))
 #print(supervised.process(" ".join(food_list50)))
 
-summary1 = ['lcs', 'relations', 'graph_relations']
-summary2 = ['relations', 'lcs', 'graph_relations']
-description1 = ['graph_relations', 'lcs', 'relations']
-description2 = ['lcs', 'graph_relations', 'relations']
+summary1 = ['relations', 'graph_relations'] #riassuntivo 1
+summary2 = ['relations', 'lcs', 'graph_relations'] #riassuntivo 2
+description1 = ['graph_relations', 'lcs', 'relations'] #descrittivo 1
+description2 = ['lcs', 'graph_relations', 'relations'] #descrittivo 2
 
 #param Composition > stringlist, sequenza, similarita' minima per coppie di termini, numero di synset massimi per un termine
-composition = Composition(test_lists.sentiment_list9, summary2, 0.3, 20)
+composition = Composition(test_lists.food_list50, summary2, 0.3, 10)
+
+
+#creare una funzione che permuta automaticamente i metodi generando tutte le possibili
+
 
 
 

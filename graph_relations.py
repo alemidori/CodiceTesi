@@ -27,17 +27,16 @@ def process(strings, param_similarity, num_synset):
 
     if sum(degree_centrality_dict.values()) != 0.0:
         percentile = np.percentile(list(degree_centrality_dict.values()), 90)
-
+        print("Percentile: "+str(percentile))
         for synset_centr in degree_centrality_dict.keys():
-            if degree_centrality_dict[synset_centr] > percentile: #se sono abbastanza centrali
-                print(str(synset_centr)+str(degree_centrality_dict[synset_centr]))
+            if degree_centrality_dict[synset_centr] >= percentile: #se sono abbastanza centrali
+                #print(str(synset_centr)+str(degree_centrality_dict[synset_centr]))
                 synset_to_strings.append(synset_centr.lemmas()[0].name())
-        if not synset_to_strings:
-            print("Termini con centralità inferiore al percentile:")
-            synset_to_strings.append([el.lemmas()[0].name() for el in degree_centrality_dict.keys()])
+        if synset_to_strings:
+            print("Termini con centralità maggiore o uguale al percentile.")
 
     else:
-        print("Termini con centralità = 0.0:")
+        print("Termini con centralità = 0.0.")
         synset_to_strings.append([el.lemmas()[0].name() for el in degree_centrality_dict.keys()])
 
     final = list(set(flatten(synset_to_strings)))
@@ -53,6 +52,6 @@ def process(strings, param_similarity, num_synset):
     # nx.draw_networkx_edge_labels(G, pos, labels=edge_labels)
     plt.savefig('graph.png')
 
-    print('\n' + str(final))
+    print('\n' + str(len(final)) + " elementi nella lista.\n" + str(final))
     return final
 
