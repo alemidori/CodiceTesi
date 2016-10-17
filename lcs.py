@@ -6,7 +6,7 @@ final = []
 
 def process(list_of_string):
 
-    print("\n\n*************INIZIO METODO LCS")
+    #print("\n\n*************INIZIO METODO LCS")
     lcs_list = []
     terms_dict = {}
     flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
@@ -35,8 +35,8 @@ def process(list_of_string):
         #         #dict: chiave: score, valore: [termine1, termine2, lcs]
         #         terms_dict[score] = [nouns_synset_list[i], nouns_synset_list[j], lcs]
         #         lcs_list.append(lcs)
-        print("I synset sono: " + str(len(synsetslist)))
-        print(synsetslist)
+        #print("I synset sono: " + str(len(synsetslist)))
+        #print(synsetslist)
         for i in range(0, (len(synsetslist) - 1)):
             for j in range(i+1, (len(synsetslist)-1)):
                 score = synsetslist[i].path_similarity(synsetslist[j])
@@ -73,8 +73,8 @@ def process(list_of_string):
             #evito di considerare termini come: entita', entita' fisica ecc, quindi troppo generici
             #verifico dunque il livello di profondita' (0 = entity)
             if synset.max_depth() < 3:
-                print(str(synset)+" --> "+str(synset.max_depth()))
-                print(str(synset)+" troppo generica")
+                #print(str(synset)+" --> "+str(synset.max_depth()))
+                #print(str(synset)+" troppo generica")
                 lcs_set.remove(synset)
 
 
@@ -88,7 +88,7 @@ def process(list_of_string):
             final = list(set(new_list_of_string))
 
         if len(more_similar_couples) > 2:
-            print('\n' + str(final))
+            #print('\n' + str(final))
             process(new_list_of_string)
 
 
@@ -96,7 +96,7 @@ def process(list_of_string):
     else:
         final.append(list_of_string)
 
-    print('\n' + str(len(final)) + " elementi nella lista.\n" + str(flatten(final)))
+    #print('\n' + str(len(final)) + " elementi nella lista.\n" + str(flatten(final)))
     return final
 
 

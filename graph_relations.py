@@ -7,11 +7,11 @@ import numpy as np
 
 def process(strings):
     flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
-    print("\n\n*************INIZIO METODO GRAPH_RELATIONS")
+    #print("\n\n*************INIZIO METODO GRAPH_RELATIONS")
     synset_to_strings = []
     synsetslist = strings_to_synsets.get_all_synsets(strings)
-    print("I synset sono: "+str(len(synsetslist)))
-    print(synsetslist)
+    #print("I synset sono: "+str(len(synsetslist)))
+    #print(synsetslist)
     G = nx.Graph() #creo il grafo
 
     for synset in synsetslist:
@@ -24,25 +24,29 @@ def process(strings):
                 # arco tra i due nodi
                 G.add_edge(G.nodes()[i], G.nodes()[j], weight=score)
 
-    degree_centrality_dict = nx.degree_centrality(G)
-    print("Degree centrality dict: " +str(degree_centrality_dict))
+    if len(G) > 1:
+        degree_centrality_dict = nx.degree_centrality(G)
+        #print("Degree centrality dict: " +str(degree_centrality_dict))
 
-    if sum(degree_centrality_dict.values()) != 0.0:
-        percentile = np.percentile(list(degree_centrality_dict.values()), 90)
-        print("Percentile: "+str(percentile))
-        for synset_centr in degree_centrality_dict.keys():
-            if degree_centrality_dict[synset_centr] >= percentile: #se sono abbastanza centrali
-                #print(str(synset_centr)+str(degree_centrality_dict[synset_centr]))
-                synset_to_strings.append(synset_centr.lemmas()[0].name())
-        if synset_to_strings:
-            print("Termini con centralità maggiore o uguale al percentile.")
+        if sum(degree_centrality_dict.values()) != 0.0:
+            percentile = np.percentile(list(degree_centrality_dict.values()), 90)
+            #print("Percentile: "+str(percentile))
+            for synset_centr in degree_centrality_dict.keys():
+                if degree_centrality_dict[synset_centr] >= percentile: #se sono abbastanza centrali
+                    #print(str(synset_centr)+str(degree_centrality_dict[synset_centr]))
+                    synset_to_strings.append(synset_centr.lemmas()[0].name())
+            # if synset_to_strings:
+            #     print("Termini con centralità maggiore o uguale al percentile.")
 
+        else:
+            #print("Termini con centralità = 0.0.")
+            synset_to_strings.append([el.lemmas()[0].name() for el in degree_centrality_dict.keys()])
     else:
-        print("Termini con centralità = 0.0.")
-        synset_to_strings.append([el.lemmas()[0].name() for el in degree_centrality_dict.keys()])
+        # se il grafo ha solo un nodo la centralita' non puo' essere calcolata
+        synset_to_strings.append([n.lemmas()[0].name() for n in G.nodes()])
 
     final = list(set(flatten(synset_to_strings)))
-    print("Nuova lista di termini dai synset: " + str(final))
+    #print("Nuova lista di termini dai synset: " + str(final))
     #print(G.number_of_nodes())
     #print(G.number_of_edges())
 
@@ -54,6 +58,6 @@ def process(strings):
     # nx.draw_networkx_edge_labels(G, pos, labels=edge_labels)
     plt.savefig('graph.png')
 
-    print('\n' + str(len(final)) + " elementi nella lista.\n" + str(final))
+    #print('\n' + str(len(final)) + " elementi nella lista.\n" + str(final))
     return final
 
