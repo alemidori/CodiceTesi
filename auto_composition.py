@@ -17,7 +17,7 @@ for it in stringlists:
 
 test = itertools.permutations(methodslist)
 configlist = list(test)
-globdict = {}
+globlist = []
 
 for listitem in stringlists:
     print('Lista termini: '+str(listitem))
@@ -35,8 +35,9 @@ for listitem in stringlists:
             else:
                 print("Uno o più metodi inesistenti nella lista 'globlist'.")
         print("Risultato finale configurazione: " + str(provresult)+ '\n')
-        globdict[str(listitem)] = [config, provresult]
+        globlist.append([listitem, config, provresult])
 
-print(str(len(globdict)))
-for k, v in globdict.items():
-    print(k,v)
+
+for conflist in globlist:
+    print("Lista: "+str(conflist[0])+ " Configurazione: "+str(conflist[1])+" Risultato: "+str(conflist[2]))
+

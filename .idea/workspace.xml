@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="09b82850-d871-4cce-a71f-77385f5af7f8" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/htmls/mysite/polls/static/imgs/wordsimg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/corpus_nyt.lda-c" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/corpus_nyt.lda-c.index" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tmp/corpus_nyt.lda-c.vocab" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph.png" afterPath="$PROJECT_DIR$/graph.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composition.py" afterPath="$PROJECT_DIR$/composition.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/create_nyt_dataset.py" afterPath="$PROJECT_DIR$/create_nyt_dataset.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/graph_relations.py" afterPath="$PROJECT_DIR$/graph_relations.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lcs.py" afterPath="$PROJECT_DIR$/lcs.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lda_nyt.py" afterPath="$PROJECT_DIR$/lda_nyt.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/relations.py" afterPath="$PROJECT_DIR$/relations.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/strings_to_synsets.py" afterPath="$PROJECT_DIR$/strings_to_synsets.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auto_composition.py" afterPath="$PROJECT_DIR$/auto_composition.py" />
     </list>
     <ignored path="Codice.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,7 +59,7 @@
       <file leaf-file-name="lda_nyt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lda_nyt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
+            <state relative-caret-position="975">
               <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -99,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="graph_relations.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="graph_relations.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/graph_relations.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+            <state relative-caret-position="225">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
               </folding>
@@ -124,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auto_composition.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="auto_composition.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/auto_composition.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="313">
+              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -185,8 +174,8 @@
         <option value="$PROJECT_DIR$/composition.py" />
         <option value="$PROJECT_DIR$/create_nyt_dataset.py" />
         <option value="$PROJECT_DIR$/lda_nyt.py" />
-        <option value="$PROJECT_DIR$/auto_composition.py" />
         <option value="$PROJECT_DIR$/graph_relations.py" />
+        <option value="$PROJECT_DIR$/auto_composition.py" />
       </list>
     </option>
   </component>
@@ -836,13 +825,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/create_nyt_dataset.py">
+    <entry file="file://$PROJECT_DIR$/graph.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strings_to_synsets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,7 +859,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lda_nyt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="975">
           <caret line="65" column="19" selection-start-line="65" selection-start-column="19" selection-end-line="65" selection-end-column="19" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
@@ -875,35 +867,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/graph.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auto_composition.py">
+    <entry file="file://$PROJECT_DIR$/create_nyt_dataset.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="25" column="29" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="675">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#14#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/strings_to_synsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/graph_relations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="225">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/auto_composition.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
