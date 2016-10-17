@@ -7,7 +7,7 @@ client = pymongo.MongoClient()
 db_nyt = client['nyt_dataset']
 
 tokens_coll = db_nyt['tokens']
-result_keywords = db_nyt['result_keywords']
+result_keywords = db_nyt['results']
 
 list_dict = []
 
@@ -43,13 +43,3 @@ def create_filtered_nyt():
         result_keywords.insert_one({'text': item['text'], 'tokens': item['tokens'] , 'text_keywords': item['keywords']})
     return
 
-def get_tokens():
-    token_list = []
-    cursor = result_keywords.find(None, {"tokens": 1, '_id': 0})  # metto None perche' sto
-    # facendo una selezione su niente quindi voglio che mi restituisca tutto
-    for element in cursor:
-        token_list.append(element['tokens'])  #e' una lista di liste in cui ogni lista interna ha i token
-        # riferiti ad ogni singolo paragrafo
-    return token_list
-
-create_filtered_nyt()

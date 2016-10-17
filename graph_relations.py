@@ -1,13 +1,15 @@
+from __future__ import division
 import networkx as nx
 import strings_to_synsets
 import matplotlib.pyplot as plt
 import numpy as np
 
-def process(strings, param_similarity, num_synset):
+
+def process(strings):
     flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
     print("\n\n*************INIZIO METODO GRAPH_RELATIONS")
     synset_to_strings = []
-    synsetslist = strings_to_synsets.get_all_synsets(strings, num_synset)
+    synsetslist = strings_to_synsets.get_all_synsets(strings)
     print("I synset sono: "+str(len(synsetslist)))
     print(synsetslist)
     G = nx.Graph() #creo il grafo
@@ -18,7 +20,7 @@ def process(strings, param_similarity, num_synset):
     for i in range(0, (len(G.nodes()) - 1)):
         for j in range(i + 1, (len(G.nodes()) - 1)):
             score = G.nodes()[i].path_similarity(G.nodes()[j])
-            if score > param_similarity: #se sono sufficientemente simili nel grafo di wordnet allora crea un
+            if score > 0.3: #se sono sufficientemente simili nel grafo di wordnet allora crea un
                 # arco tra i due nodi
                 G.add_edge(G.nodes()[i], G.nodes()[j], weight=score)
 

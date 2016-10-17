@@ -4,7 +4,7 @@ from nltk import tag
 
 final = []
 
-def process(list_of_string, similarity, num_synset):
+def process(list_of_string):
 
     print("\n\n*************INIZIO METODO LCS")
     lcs_list = []
@@ -15,7 +15,7 @@ def process(list_of_string, similarity, num_synset):
     #nouns_synset_list = []
 
     if len(set_string) > 1:
-        synsetslist = strings_to_synsets.get_noun_synsets(set_string, num_synset)
+        synsetslist = strings_to_synsets.get_noun_synsets(set_string)
 
         # [terms_synsets_list.append(synset.lemmas()[0].name()) for synset in synsetslist]
         # returned_list = tag_terms(terms_synsets_list)
@@ -48,7 +48,7 @@ def process(list_of_string, similarity, num_synset):
         more_similar_couples = {}
 
         for key in terms_dict.keys():
-            if key >= similarity:
+            if key >= 0.3:
                 more_similar_couples[key] = terms_dict[key]
 
         if len(more_similar_couples) > 2:
@@ -89,7 +89,7 @@ def process(list_of_string, similarity, num_synset):
 
         if len(more_similar_couples) > 2:
             print('\n' + str(final))
-            process(new_list_of_string, similarity, num_synset)
+            process(new_list_of_string)
 
 
     #se la lista iniziale e' composta da un solo termine, stampa quello
@@ -100,14 +100,14 @@ def process(list_of_string, similarity, num_synset):
     return final
 
 
-def tag_terms(list_of_terms):
-    list_nouns = []
-    print(list_of_terms)
-    tuple_list = tag.pos_tag(list_of_terms)
-    [list_nouns.append(term[0]) for term in tuple_list if term[1] == 'NN']
-
-    print(list_nouns)
-    return list_nouns
+# def tag_terms(list_of_terms):
+#     list_nouns = []
+#     print(list_of_terms)
+#     tuple_list = tag.pos_tag(list_of_terms)
+#     [list_nouns.append(term[0]) for term in tuple_list if term[1] == 'NN']
+#
+#     print(list_nouns)
+#     return list_nouns
 
 
 #non posso calcolare la path similarity indifferentemente tra sostantivi, verbi, aggettivi e avverbi
