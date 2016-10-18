@@ -3,6 +3,7 @@ import relations
 import graph_relations
 import itertools
 import create_nyt_dataset
+import specificity_nyt
 
 methodslist = ['lcs', 'relations', 'graph_relations']
 
@@ -19,7 +20,7 @@ def compose_methods():
 
     increment = 0
     for listitem in stringlists:
-        print('é*Lista termini '+increment+' :'+str(listitem))
+        print('___________________________Lista termini '+str(increment)+' :'+str(listitem))
         provresult = listitem
         #print(configlist)
         for config in configlist:
@@ -44,6 +45,15 @@ def compose_methods():
     #     print("Lista: " + str(conflist[0]) + " Configurazione: " + str(conflist[1]) + " Risultato: " + str(conflist[2]))
     # return globlist
 
+def add_specific_words_to_collection():
+    cursor = create_nyt_dataset.result_keywords.find()
+    for element in cursor:
+        ldawords = element['LDA_keywords']
+        tokens = element['tokens']
+        specificwords = specificity_nyt.get_specific_words(ldawords, tokens)
+        element['specific_words'] = specificwords
+        create_nyt_dataset.result_keywords.save(element)
+    return
 
 
 def update_collection(tokenlist, configuration, configresult):
@@ -53,5 +63,5 @@ def update_collection(tokenlist, configuration, configresult):
         create_nyt_dataset.result_keywords.save(elem)
     return
 
-
-compose_methods()
+add_specific_words_to_collection()
+#compose_methods()

@@ -87,8 +87,9 @@ def get_tokens():
     for element in cursor:
         token_list.append(element['tokens'])  #e' una lista di liste in cui ogni lista interna ha i token
         # riferiti ad ogni singolo paragrafo
-    print("sdbhjsd "+str(len(token_list)))
+    #print("sdbhjsd "+str(len(token_list)))
     return token_list
 
-create_nyt_dataset.create_filtered_nyt()
-calculate_topic_distribution()
+#create_nyt_dataset.create_filtered_nyt()
+create_nyt_dataset.save_frequency_allcorpus()
+#calculate_topic_distribution()
