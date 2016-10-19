@@ -15,7 +15,7 @@ def compose_methods():
     increment = 0
     for item in cursor:
         print('___________________________Lista termini ' + str(increment))
-        prov_stringlist = item['tokens']
+        prov_stringlist = item['LDA_keywords']
         prov_specificlist = item['specific_words']
         for config in configlist:
             for met in config:

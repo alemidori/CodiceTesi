@@ -6,18 +6,19 @@ def calculate_topic_distribution():
     corpus, dictionary = create_dictionary()
     Lda_model = models.LdaModel(corpus, id2word=dictionary, num_topics=300)
 
-    for k in Lda_model.show_topics(num_topics=300,num_words=50,formatted=False):
+    for k in Lda_model.show_topics(num_topics=300,num_words=20,formatted=False):
         termslist = []
-        for i in range(0, 50):
+        for i in range(0, 20):
             termslist.append(k[1][i][0])
         terms[k[0]] = termslist
 
     corpus_Lda = Lda_model[corpus]
     corpora.BleiCorpus.serialize('tmp/corpus_nyt.lda-c', corpus_Lda)
-    notopic_documents = check_notopic_documents(corpus_Lda, dictionary)
+    notopic_documents = check_notopic_documents(corpus_Lda)
     if notopic_documents:
         remove_notopic_documents(notopic_documents)
-    calculate_main_topic(corpus_Lda, terms)
+    else:
+        calculate_main_topic(corpus_Lda, terms)
     return
 
 def create_dictionary():
@@ -47,57 +48,37 @@ def update_result_keywords_collection(num_topic, list_LDAkeywords):
 def calculate_main_topic(ldamodel, terms):
     print('Calcolo i topic dominanti in ciascun documento...')
     list_topicmax = []
-    inc = 0
-    notopic_documents = []
     for doc in ldamodel:
         flag = 0
-        if doc:
-            for n in doc:
-                if n[1] == max([n[1] for n in doc]) and flag == 0:
-                    list_topicmax.append(n[0])
-                    flag = 1
-        else:
-            print('Non ci sono topic nel doc: '+str(inc))
-            notopic_documents.append(doc)
-
-        print(str(len(notopic_documents)))
-        inc += 1
-
-
+        for n in doc:
+            if n[1] == max([n[1] for n in doc]) and flag == 0:
+                list_topicmax.append(n[0])
+                flag = 1
     print("Lista topic dominanti: "+str(len(list_topicmax)))
-
     termstopics = []
     for item in list_topicmax:
         termstopics.append(terms[item])
-
     update_result_keywords_collection(list_topicmax, termstopics)
-
     return list_topicmax
 
-
-
-def check_notopic_documents(ldamodel, dictionary):
+def check_notopic_documents(ldamodel):
     print('Verifica dei topic in ciascun documento...')
     inc = 0
     notopic_documents = []
     for doc in ldamodel:
-
-        flag = 0
-        if doc:
-            for n in doc:
-                if n[1] == max([n[1] for n in doc]) and flag == 0:
-                    flag = 1
-        else:
+        if not doc:
             print('Non ci sono topic nel doc: '+str(inc))
-            notopic_documents.append(doc)
-
-        print(str(len(notopic_documents)))
+            notopic_documents.append(inc)
         inc += 1
-
     return notopic_documents
 
 def remove_notopic_documents(notopicdoc):
-    #todo: rimuovi i record aventi indice pari a quello dei documenti nella lista data in input
+    for number in notopicdoc:
+        print('Rimuovo record con position: '+str(number))
+        create_nyt_dataset.result_keywords.remove({'position': number})
+
+    print('Dopo rimozione: '+str(create_nyt_dataset.result_keywords.count()))
+    calculate_topic_distribution() #rieseguo lda sui documenti con topic
     return
 
 def get_tokens():

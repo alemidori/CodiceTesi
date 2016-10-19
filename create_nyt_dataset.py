@@ -47,7 +47,6 @@ def create_filtered_nyt():
         result_keywords.insert_one({'text': item['text'], 'tokens': item['tokens'] , 'text_keywords': item['keywords'],
                                     'position': position})
         position += 1
-    print('Numero position: '+str(position))
     return
 
 def save_frequency_allcorpus():
