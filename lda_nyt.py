@@ -12,15 +12,16 @@ def calculate_topic_distribution():
             termslist.append(k[1][i][0])
         terms[k[0]] = termslist
 
-
     corpus_Lda = Lda_model[corpus]
     corpora.BleiCorpus.serialize('tmp/corpus_nyt.lda-c', corpus_Lda)
+    notopic_documents = check_notopic_documents(corpus_Lda, dictionary)
+    if notopic_documents:
+        remove_notopic_documents(notopic_documents)
     calculate_main_topic(corpus_Lda, terms)
     return
 
 def create_dictionary():
     toks = get_tokens()
-    print("JBKBKBHVJHB "+str(len(toks)))
     dictionary = corpora.Dictionary(toks)
     corpus = [dictionary.doc2bow(token) for token in toks]
     print("Dizionario creato.")
@@ -29,67 +30,83 @@ def create_dictionary():
 def update_result_keywords_collection(num_topic, list_LDAkeywords):
     cursor = create_nyt_dataset.result_keywords.find()
     count = cursor.count()
-    print(str(count))
     print("num_topic "+str(len(num_topic)))
     print("listLDA "+str(len(list_LDAkeywords)))
     increment = 0
     for el in cursor:
-        if increment == count:
-            print("out of rangeee")
-            break
-        elif increment < count:
-            print(increment)
+        if increment < count:
             el['topic'] = num_topic[increment]
             el['LDA_keywords'] = list_LDAkeywords[increment]
             create_nyt_dataset.result_keywords.save(el)
             increment += 1
-
+        else:
+            break
     return
 
 
 def calculate_main_topic(ldamodel, terms):
-
-    max_list = []
-    for doc in ldamodel:
-        single_list = []  # singola lista di topic per ciascun paragrafo
-        max_dict = {}
-        for n in doc:  # per ogni topic nel pragrafo
-            single_list.append(n[1])  # appendo il valore della sua distribuzione
-        for n in doc:
-            if n[1] == max(single_list) and n[1] not in max_dict.values():  # trovo il topic con maggiore distribuzione
-                max_dict[n[0]] = n[1]
-        max_list.append(max_dict)
-
-
+    print('Calcolo i topic dominanti in ciascun documento...')
     list_topicmax = []
-    print("maxlist!! "+str(len(max_list)))
-    print(max_list)
-    for elem in max_list:
-        for key in elem.keys():
-            list_topicmax.append(key)
-    #list_topicmax = sum(list_topicmax, [])
-    print(list_topicmax)
-    print("topicmax!! "+str(len(list_topicmax)))
+    inc = 0
+    notopic_documents = []
+    for doc in ldamodel:
+        flag = 0
+        if doc:
+            for n in doc:
+                if n[1] == max([n[1] for n in doc]) and flag == 0:
+                    list_topicmax.append(n[0])
+                    flag = 1
+        else:
+            print('Non ci sono topic nel doc: '+str(inc))
+            notopic_documents.append(doc)
+
+        print(str(len(notopic_documents)))
+        inc += 1
+
+
+    print("Lista topic dominanti: "+str(len(list_topicmax)))
 
     termstopics = []
-    for i in range(0, len(list_topicmax)):
-        termstopics.append(terms[list_topicmax[i]])
+    for item in list_topicmax:
+        termstopics.append(terms[item])
 
     update_result_keywords_collection(list_topicmax, termstopics)
 
     return list_topicmax
 
+
+
+def check_notopic_documents(ldamodel, dictionary):
+    print('Verifica dei topic in ciascun documento...')
+    inc = 0
+    notopic_documents = []
+    for doc in ldamodel:
+
+        flag = 0
+        if doc:
+            for n in doc:
+                if n[1] == max([n[1] for n in doc]) and flag == 0:
+                    flag = 1
+        else:
+            print('Non ci sono topic nel doc: '+str(inc))
+            notopic_documents.append(doc)
+
+        print(str(len(notopic_documents)))
+        inc += 1
+
+    return notopic_documents
+
+def remove_notopic_documents(notopicdoc):
+    #todo: rimuovi i record aventi indice pari a quello dei documenti nella lista data in input
+    return
+
 def get_tokens():
     token_list = []
     cursor = create_nyt_dataset.result_keywords.find()
-    count = cursor.count()
-    print("COUNT "+str(count))
     for element in cursor:
         token_list.append(element['tokens'])  #e' una lista di liste in cui ogni lista interna ha i token
         # riferiti ad ogni singolo paragrafo
     #print("sdbhjsd "+str(len(token_list)))
     return token_list
 
-#create_nyt_dataset.create_filtered_nyt()
-create_nyt_dataset.save_frequency_allcorpus()
-#calculate_topic_distribution()
+

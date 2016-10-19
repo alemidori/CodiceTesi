@@ -4,6 +4,7 @@ import datetime
 import processing
 from itertools import chain
 from collections import Counter
+import specificity_nyt
 
 client = pymongo.MongoClient()
 db_nyt = client['nyt_dataset']
@@ -12,15 +13,14 @@ tokens_coll = db_nyt['tokens']
 result_keywords = db_nyt['results']
 term_frequency = db_nyt['term_frequency']
 
-list_dict = []
 
 def filter_date():
-
+    list_dict = []
     cursor = tokens_coll.find({'$and':
                                    [{'keywords': {'$gt': []}},
                                     {'pub_date': {'$gte': datetime.datetime(1960, 1, 1)}}
                             ]})
-    print(cursor.count())
+    print('Record collection: '+str(cursor.count()))
     for el in cursor:
         keywords = []
         elemdict = {}
@@ -38,16 +38,16 @@ def filter_date():
 
         list_dict.append(elemdict)
 
-    return
+    return list_dict
 
 def create_filtered_nyt():
-    filter_date()
-    for item in list_dict:
-        result_keywords.insert_one({'text': item['text'], 'tokens': item['tokens'] , 'text_keywords': item['keywords']})
-    return
-
-def insert_terms_frequency(term, freq):
-    term_frequency.insert_one({'term': term, 'frequency': freq})
+    listdict = filter_date()
+    position = 0
+    for item in listdict:
+        result_keywords.insert_one({'text': item['text'], 'tokens': item['tokens'] , 'text_keywords': item['keywords'],
+                                    'position': position})
+        position += 1
+    print('Numero position: '+str(position))
     return
 
 def save_frequency_allcorpus():
@@ -67,5 +67,17 @@ def save_frequency_allcorpus():
     print("Riduzione ad un'unica lista terminata.")
 
     for x in term_freqs_all.keys():
-        insert_terms_frequency(x, term_freqs_all[x])
+        term_frequency.insert_one({'term': x, 'frequency': term_freqs_all[x]})
+    print('Salvataggio frequenze terminato.')
+    return
+
+def add_specific_words_to_collection():
+    print('Calcolo specificità per ogni lista di termini...')
+    cursor = result_keywords.find()
+    for element in cursor:
+        ldawords = element['LDA_keywords']
+        tokens = element['tokens']
+        specificwords = specificity_nyt.get_specific_words(ldawords, tokens)
+        element['specific_words'] = specificwords
+        result_keywords.save(element)
     return

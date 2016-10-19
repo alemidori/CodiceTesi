@@ -3,8 +3,6 @@ import cmath
 from collections import Counter
 
 
-topic_dict = {}
-
 def get_specific_words(Ldawords, tokenlist):
     specific_words = []
     term_freqs = Counter(tokenlist)
