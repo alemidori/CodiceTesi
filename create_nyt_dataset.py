@@ -5,14 +5,16 @@ import processing
 from itertools import chain
 from collections import Counter
 import specificity_nyt
+from pymongo import ASCENDING
 
 client = pymongo.MongoClient()
 db_nyt = client['nyt_dataset']
 
 tokens_coll = db_nyt['tokens']
-result_keywords = db_nyt['results']
+result_keywords = db_nyt['filtered_nyt']
 term_frequency = db_nyt['term_frequency']
-
+topicsecription = db_nyt['topicdescription']
+document_distribution = db_nyt['documentdistribution']
 
 def filter_date():
     list_dict = []
@@ -41,6 +43,7 @@ def filter_date():
     return list_dict
 
 def create_filtered_nyt():
+    result_keywords.remove({})
     listdict = filter_date()
     position = 0
     for item in listdict:
