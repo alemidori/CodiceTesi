@@ -4,11 +4,6 @@ import graph_relations
 import itertools
 import create_nyt_dataset
 
-#todo: DA CAMBIARE TUTTO ********************************
-#********************************
-#********************************
-
-
 def compose_methods():
     methodslist = ['lcs', 'relations', 'graph_relations']
 
@@ -16,27 +11,33 @@ def compose_methods():
     test = itertools.permutations(methodslist)
     configlist = list(test)
 
+    incr = 0
     for item in cursor:
-        prov_stringlist = item['LDA_keywords']
-        prov_specificlist = item['specific_words']
+        tuple_hdp = []
+        tuple_specificity = []
+        for k in item['tuple_terms']:
+            tuple_hdp.append((k[0], 0)) #costruisco tante tuple quanti sono i termini di hdp (ossia 10) con peso = 0
+        for j in item['specific_words_in_documents']:
+            tuple_specificity.append((j, 0)) #costruisco tante tuple quanti sono i termini specifici nei docs con peso 0
         for config in configlist:
             for met in config:
                 if met == 'lcs':
-                    prov_stringlist = lcs.process(prov_stringlist)
-                    prov_specificlist = lcs.process(prov_specificlist)
+                    tuple_hdp = lcs.process(tuple_hdp)
+                    tuple_specificity = lcs.process(tuple_specificity)
                 elif met == 'relations':
-                    prov_stringlist = relations.process(prov_stringlist)
-                    prov_specificlist = relations.process(prov_specificlist)
+                    tuple_hdp = relations.process(tuple_hdp)
+                    tuple_specificity = relations.process(tuple_specificity)
                 elif met == 'graph_relations':
-                    prov_stringlist = graph_relations.process(prov_stringlist)
-                    prov_specificlist = graph_relations.process(prov_specificlist)
+                    tuple_hdp = graph_relations.process(tuple_hdp)
+                    tuple_specificity = graph_relations.process(tuple_specificity)
                 else:
                     break
             stringconfig = str(config[0] + '-' + config[1] + '-' + config[2])
-            stringconfigspecification = 'specificity-'+stringconfig
-            item[stringconfig] = prov_stringlist
-            item[stringconfigspecification] = prov_specificlist
-            create_nyt_dataset.result_keywords.save(item)
+            stringconfigspecification = 'SPECIFICITY-'+stringconfig
+            item[stringconfig] = tuple_hdp
+            item[stringconfigspecification] = tuple_specificity
+            create_nyt_dataset.topicsecription.save(item)
+        incr += 1
     return
 
 

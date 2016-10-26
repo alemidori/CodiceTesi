@@ -8,17 +8,22 @@ from nltk.corpus import wordnet as wn
 
 final_list = []
 
-def process(list_of_string):
-    #print("\n\n*************INIZIO METODO RELATIONS")
-    similarity = None
+def process(tuples):
+    print("\n\n*************INIZIO METODO RELATIONS")
     flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
-    set_string = list(set(flatten(list_of_string)))
+    tuples = flatten(tuples)
+    print(tuples)
+    set_string = []
+    for t in tuples:
+        set_string.append(t[0])
+    set_string = list(set(set_string))
     final_string = []
     # uso la funzione di lcs string_to_synsets(considerando anche aggettivi avverbi e verbi)
     # per ottenere i synsets dalla lista dei termini in input
     synsetslist = strings_to_synsets.get_all_synsets(set_string)
     #print("I synset sono: " + str(len(synsetslist)))
     #print(synsetslist)
+    final_tuples = []
 
     for i in range(0, (len(synsetslist) - 1)):
         for j in range(i + 1, (len(synsetslist) - 1)):
@@ -35,7 +40,10 @@ def process(list_of_string):
     #print('\n'+str(len(final_string_set))+" elementi nella lista.\n" + str(final_string_set))
     if not final_string_set:
         print("Sono stati scartati tutti i termini perché aventi più synset del parametro impostato. ("+ str(10)+")")
-    return final_string_set
+
+    for f in final_string_set:
+        final_tuples.append((f, 0))
+    return final_tuples
 
 
 def check_relation(sy1, sy2):

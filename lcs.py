@@ -4,15 +4,21 @@ from nltk import tag
 
 final = []
 
-def process(list_of_string):
-
-    #print("\n\n*************INIZIO METODO LCS")
+def process(tuples):
+    print("\n\n*************INIZIO METODO LCS")
+    flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
+    tuples = flatten(tuples)
+    print(tuples)
     lcs_list = []
     terms_dict = {}
-    flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
-    set_string = list(set(flatten(list_of_string)))
+    set_string = []
+
+    for t in tuples:
+        set_string.append(t[0])
+    set_string = list(set(set_string))
     #terms_synsets_list = []
     #nouns_synset_list = []
+    final_tuples = []
 
     if len(set_string) > 1:
         synsetslist = strings_to_synsets.get_noun_synsets(set_string)
@@ -86,18 +92,23 @@ def process(list_of_string):
             global final
             final.clear()
             final = list(set(new_list_of_string))
+            for f in final:
+                final_tuples.append((f, 0))
 
         if len(more_similar_couples) > 2:
             #print('\n' + str(final))
-            process(new_list_of_string)
+            recors_tuples = []
+            for n in new_list_of_string:
+                recors_tuples.append((n, 0))
+            process(recors_tuples)
 
 
     #se la lista iniziale e' composta da un solo termine, stampa quello
     else:
-        final.append(list_of_string)
+        final.append(tuples)
 
     #print('\n' + str(len(final)) + " elementi nella lista.\n" + str(flatten(final)))
-    return final
+    return final_tuples
 
 
 # def tag_terms(list_of_terms):

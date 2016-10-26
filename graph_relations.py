@@ -5,11 +5,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def process(strings):
+def process(tuples):
+    print("\n\n*************INIZIO METODO GRAPH_RELATIONS")
     flatten = lambda l: sum(map(flatten, l), []) if isinstance(l, list) else [l]
-    #print("\n\n*************INIZIO METODO GRAPH_RELATIONS")
+    tuples = flatten(tuples)
+    print(tuples)
     synset_to_strings = []
-    synsetslist = strings_to_synsets.get_all_synsets(strings)
+    synsetslist = strings_to_synsets.get_all_synsets([k[0] for k in tuples])
     #print("I synset sono: "+str(len(synsetslist)))
     #print(synsetslist)
     G = nx.Graph() #creo il grafo
@@ -34,18 +36,19 @@ def process(strings):
             for synset_centr in degree_centrality_dict.keys():
                 if degree_centrality_dict[synset_centr] >= percentile: #se sono abbastanza centrali
                     #print(str(synset_centr)+str(degree_centrality_dict[synset_centr]))
-                    synset_to_strings.append(synset_centr.lemmas()[0].name())
+                    synset_to_strings.append((synset_centr.lemmas()[0].name(), degree_centrality_dict[synset_centr]))
             # if synset_to_strings:
             #     print("Termini con centralità maggiore o uguale al percentile.")
 
         else:
             #print("Termini con centralità = 0.0.")
-            synset_to_strings.append([el.lemmas()[0].name() for el in degree_centrality_dict.keys()])
+            synset_to_strings.append([(el.lemmas()[0].name(), degree_centrality_dict[el])
+                                      for el in degree_centrality_dict.keys()])
     else:
         # se il grafo ha solo un nodo la centralita' non puo' essere calcolata
-        synset_to_strings.append([n.lemmas()[0].name() for n in G.nodes()])
+        synset_to_strings.append(([n.lemmas()[0].name() for n in G.nodes()], 0))
 
-    final = list(set(flatten(synset_to_strings)))
+    final = synset_to_strings
     #print("Nuova lista di termini dai synset: " + str(final))
     #print(G.number_of_nodes())
     #print(G.number_of_edges())

@@ -53,3 +53,9 @@ def merge_keywords_and_specificwords_from_documents():
             create_nyt_dataset.topicsecription.save(element)
 
     return
+
+def remove_empty():
+    print('Rimozione record con campo merged_keywords vuoto...')
+    create_nyt_dataset.topicsecription.remove({'merged_keywords_in_documents': []})
+
+    return

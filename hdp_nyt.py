@@ -7,15 +7,16 @@ def create_dictionary():
     corpus = [dictionary.doc2bow(token) for token in toks]
     print("Dizionario creato.")
     dictionary.save('tmp/dictionary.dict')
-    return
+    return corpus, dictionary
 
 def calculate_topic_distribution():
     create_nyt_dataset.topicsecription.remove({})
-    dictionary = corpora.Dictionary.load('tmp/dictionary.dict')
-    corp = corpora.BleiCorpus('tmp/corpus_nyt.hdp-c')
-    hdpmodel = models.HdpModel(corp, id2word=dictionary)
+    #dictionary = corpora.Dictionary.load('tmp/dictionary.dict')
+    #corp = corpora.BleiCorpus('tmp/corpus_nyt.hdp-c')
+    corpus, dictionary = create_dictionary()
+    hdpmodel = models.HdpModel(corpus, id2word=dictionary)
 
-    hdpmodel_corp = hdpmodel[corp]
+    hdpmodel_corp = hdpmodel[corpus]
     create_topic_document_distribution(hdpmodel_corp)
 
     for k in hdpmodel.show_topics(topn=10, topics=-1, formatted=False):
