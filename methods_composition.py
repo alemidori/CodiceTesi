@@ -2,12 +2,12 @@ import lcs
 import relations
 import graph_relations
 import itertools
-import create_nyt_dataset
+import manage_nyt_dataset
 
 def compose_methods():
     methodslist = ['lcs', 'relations', 'graph_relations']
 
-    cursor = create_nyt_dataset.topicsecription.find()
+    cursor = manage_nyt_dataset.topicsecription.find()
     test = itertools.permutations(methodslist)
     configlist = list(test)
 
@@ -36,7 +36,7 @@ def compose_methods():
             stringconfigspecification = 'SPECIFICITY-'+stringconfig
             item[stringconfig] = tuple_hdp
             item[stringconfigspecification] = tuple_specificity
-            create_nyt_dataset.topicsecription.save(item)
+            manage_nyt_dataset.topicsecription.save(item)
         incr += 1
     return
 

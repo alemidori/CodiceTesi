@@ -2,13 +2,13 @@ import lcs
 import relations
 import graph_relations
 import itertools
-import create_nyt_dataset
+import manage_nyt_dataset
 
 
 def compose_methods():
     methodslist = ['lcs', 'relations', 'graph_relations']
 
-    cursor = create_nyt_dataset.result_keywords.find()
+    cursor = manage_nyt_dataset.result_keywords.find()
     test = itertools.permutations(methodslist)
     configlist = list(test)
 
@@ -34,7 +34,7 @@ def compose_methods():
             stringconfigspecification = 'specificity-'+stringconfig
             item[stringconfig] = prov_stringlist
             item[stringconfigspecification] = prov_specificlist
-            create_nyt_dataset.result_keywords.save(item)
+            manage_nyt_dataset.result_keywords.save(item)
         increment += 1
     return
 

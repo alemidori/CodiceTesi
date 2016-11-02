@@ -1,5 +1,5 @@
 from gensim import corpora, models
-import create_nyt_dataset
+import manage_nyt_dataset
 
 def calculate_topic_distribution():
     terms = {}
@@ -29,7 +29,7 @@ def create_dictionary():
     return corpus, dictionary
 
 def update_result_keywords_collection(num_topic, list_LDAkeywords):
-    cursor = create_nyt_dataset.result_keywords.find()
+    cursor = manage_nyt_dataset.result_keywords.find()
     count = cursor.count()
     print("num_topic "+str(len(num_topic)))
     print("listLDA "+str(len(list_LDAkeywords)))
@@ -38,7 +38,7 @@ def update_result_keywords_collection(num_topic, list_LDAkeywords):
         if increment < count:
             el['topic'] = num_topic[increment]
             el['LDA_keywords'] = list_LDAkeywords[increment]
-            create_nyt_dataset.result_keywords.save(el)
+            manage_nyt_dataset.result_keywords.save(el)
             increment += 1
         else:
             break
@@ -75,15 +75,15 @@ def check_notopic_documents(ldamodel):
 def remove_notopic_documents(notopicdoc):
     for number in notopicdoc:
         print('Rimuovo record con position: '+str(number))
-        create_nyt_dataset.result_keywords.remove({'position': number})
+        manage_nyt_dataset.result_keywords.remove({'position': number})
 
-    print('Dopo rimozione: '+str(create_nyt_dataset.result_keywords.count()))
+    print('Dopo rimozione: ' + str(manage_nyt_dataset.result_keywords.count()))
     calculate_topic_distribution() #rieseguo lda sui documenti con topic
     return
 
 def get_tokens():
     token_list = []
-    cursor = create_nyt_dataset.result_keywords.find()
+    cursor = manage_nyt_dataset.result_keywords.find()
     for element in cursor:
         token_list.append(element['tokens'])  #e' una lista di liste in cui ogni lista interna ha i token
         # riferiti ad ogni singolo paragrafo

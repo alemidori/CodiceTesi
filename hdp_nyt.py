@@ -1,5 +1,5 @@
 from gensim import corpora, models
-import create_nyt_dataset
+import manage_nyt_dataset
 
 def create_dictionary():
     toks = get_tokens()
@@ -10,7 +10,7 @@ def create_dictionary():
     return corpus, dictionary
 
 def calculate_topic_distribution():
-    create_nyt_dataset.topicsecription.remove({})
+    manage_nyt_dataset.topicsecription.remove({})
     #dictionary = corpora.Dictionary.load('tmp/dictionary.dict')
     #corp = corpora.BleiCorpus('tmp/corpus_nyt.hdp-c')
     corpus, dictionary = create_dictionary()
@@ -20,19 +20,19 @@ def calculate_topic_distribution():
     create_topic_document_distribution(hdpmodel_corp)
 
     for k in hdpmodel.show_topics(topn=10, topics=-1, formatted=False):
-        create_nyt_dataset.topicsecription.insert_one({'topic': k[0], 'tuple_terms': k[1]})
+        manage_nyt_dataset.topicsecription.insert_one({'topic': k[0], 'tuple_terms': k[1]})
     return
 
 def get_tokens():
     token_list = []
-    cursor = create_nyt_dataset.result_keywords.find()
+    cursor = manage_nyt_dataset.result_keywords.find()
     for element in cursor:
         token_list.append(element['tokens'])
     return token_list
 
 
 def create_topic_document_distribution(corpus):
-    create_nyt_dataset.document_distribution.remove({})
+    manage_nyt_dataset.document_distribution.remove({})
     print ("Creazione collezione delle distribuzioni dei documenti, divisi per topic.")
     topic_document_distribution = {}
     i = 0
@@ -52,9 +52,9 @@ def create_topic_document_distribution(corpus):
     for k, v in topic_document_distribution.items():
         sortedv = sorted(v, key=lambda x: x[1], reverse=True)
         json_to_insert = {'topic': k, 'document_distribution': sortedv}
-        create_nyt_dataset.document_distribution.insert_one(json_to_insert)
+        manage_nyt_dataset.document_distribution.insert_one(json_to_insert)
     print ("Creazione collezione completata.")
     print ("Creazione indici.")
-    create_nyt_dataset.document_distribution.create_index([("document_distribution.document_id", create_nyt_dataset.ASCENDING)])
+    manage_nyt_dataset.document_distribution.create_index([("document_distribution.document_id", manage_nyt_dataset.ASCENDING)])
     print ("Creazione indici completata.")
     return

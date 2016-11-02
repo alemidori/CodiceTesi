@@ -1,9 +1,9 @@
-import create_nyt_dataset
+import manage_nyt_dataset
 import specificity_nyt
 from collections import Counter
 
-cursor = create_nyt_dataset.topicsecription.find()
-cursor_doc_distr = create_nyt_dataset.document_distribution.find()
+cursor = manage_nyt_dataset.topicsecription.find()
+cursor_doc_distr = manage_nyt_dataset.document_distribution.find()
 
 def merge_keywords_and_specificwords_from_documents():
     #prendi i primi 10 documenti (se non ce ne sono 10 prendi tutti quelli che ci sono) in ogni topic
@@ -22,11 +22,11 @@ def merge_keywords_and_specificwords_from_documents():
 
         doc_details = []
         for k in doclist:
-            cursor_pos = create_nyt_dataset.result_keywords.find({'position': k})
+            cursor_pos = manage_nyt_dataset.result_keywords.find({'position': k})
             for element in cursor_pos:
                 doc_details.append(element)
 
-        cursor_topic_distr = create_nyt_dataset.topicsecription.find({'topic': topic})
+        cursor_topic_distr = manage_nyt_dataset.topicsecription.find({'topic': topic})
         for el in cursor_topic_distr:
             for n in el['tuple_terms']:
                 topicterms.append(n[0])
@@ -42,7 +42,7 @@ def merge_keywords_and_specificwords_from_documents():
             specific_merged.append(specific)
             keywords_merged.append(keywords)
         cursor_topic_distr.close()
-        cursor_topic_distr = create_nyt_dataset.topicsecription.find({'topic': topic})
+        cursor_topic_distr = manage_nyt_dataset.topicsecription.find({'topic': topic})
         for element in cursor_topic_distr:
             keywords_tuples = []
             counter = dict(Counter(sum(keywords_merged, [])))
@@ -50,12 +50,12 @@ def merge_keywords_and_specificwords_from_documents():
                 keywords_tuples.append((k, v))
             element['merged_keywords_in_documents'] = keywords_tuples
             element['specific_words_in_documents'] = list(set(sum(specific_merged, [])))
-            create_nyt_dataset.topicsecription.save(element)
+            manage_nyt_dataset.topicsecription.save(element)
 
     return
 
 def remove_empty():
     print('Rimozione record con campo merged_keywords vuoto...')
-    create_nyt_dataset.topicsecription.remove({'merged_keywords_in_documents': []})
+    manage_nyt_dataset.topicsecription.remove({'merged_keywords_in_documents': []})
 
     return
