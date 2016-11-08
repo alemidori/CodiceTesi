@@ -22,27 +22,8 @@ def process(tuples):
 
     if len(set_string) > 1:
         synsetslist = strings_to_synsets.get_noun_synsets(set_string)
-
-        # [terms_synsets_list.append(synset.lemmas()[0].name()) for synset in synsetslist]
-        # returned_list = tag_terms(terms_synsets_list)
-        # synsetslist.clear()
-        # [synsetslist.append(wn.synsets(term)) for term in returned_list]
-        # synsetslist = sum(synsetslist, [])
-        # print(synsetslist)
-        #
-        # for synset in synsetslist:
-        #     if synset.pos() == 'n':
-        #         nouns_synset_list.append(synset)
-        #
-        # for i in range(0, (len(nouns_synset_list)-1)):
-        #     for j in range(i+1, (len(nouns_synset_list)-1)):
-        #         score = nouns_synset_list[i].path_similarity(nouns_synset_list[j])
-        #         lcs = nouns_synset_list[i].lowest_common_hypernyms(nouns_synset_list[j])
-        #         #dict: chiave: score, valore: [termine1, termine2, lcs]
-        #         terms_dict[score] = [nouns_synset_list[i], nouns_synset_list[j], lcs]
-        #         lcs_list.append(lcs)
-        #print("I synset sono: " + str(len(synsetslist)))
-        #print(synsetslist)
+        print(set_string)
+        print(synsetslist)
         for i in range(0, (len(synsetslist) - 1)):
             for j in range(i+1, (len(synsetslist)-1)):
                 score = synsetslist[i].path_similarity(synsetslist[j])
@@ -105,20 +86,12 @@ def process(tuples):
 
     #se la lista iniziale e' composta da un solo termine, stampa quello
     else:
-        final.append(tuples)
+        for t in tuples:
+            final_tuples.append(t)
 
     #print('\n' + str(len(final)) + " elementi nella lista.\n" + str(flatten(final)))
     return final_tuples
 
-
-# def tag_terms(list_of_terms):
-#     list_nouns = []
-#     print(list_of_terms)
-#     tuple_list = tag.pos_tag(list_of_terms)
-#     [list_nouns.append(term[0]) for term in tuple_list if term[1] == 'NN']
-#
-#     print(list_nouns)
-#     return list_nouns
 
 
 #non posso calcolare la path similarity indifferentemente tra sostantivi, verbi, aggettivi e avverbi

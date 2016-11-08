@@ -3,7 +3,7 @@ from .forms import UploadFileForm
 from .models import UploadFile
 from django.http import HttpResponseRedirect
 import sys
-sys.path.append('/Users/Alessandra/Desktop/PycharmProjects/progetto_inforet')
+sys.path.append('/Users/Alessandra/Desktop/Tesi/CodiceTesi')
 import main
 
 
