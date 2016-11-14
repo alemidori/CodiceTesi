@@ -1,6 +1,5 @@
 from nltk.corpus import wordnet as wn
 import strings_to_synsets
-from nltk import tag
 
 final = []
 

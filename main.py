@@ -16,7 +16,7 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 
 def main(files):
 
-    splitting.process_stories(files)
+    splitting.process_texts(files)
 
     terms_dictionary.create_terms_dictonary()
 
