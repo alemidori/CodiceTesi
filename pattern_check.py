@@ -5,27 +5,21 @@ from nltk.corpus import wordnet as wn
 import itertools
 import pattern_check_networkx
 
-hyperstring = 'hypernym'
-hypostring = 'hyponym'
-holostring = 'holonym'
-antostring = 'antonym'
-globalpathslist = []
-variable = False
+keywords = []
+hdpterms = []
+print('Produco le liste di keywords e termini hdp...')
+cursor = manage_nyt_dataset.topicsecription.find().limit(3)
+for record in cursor:
+    for item in record['tuple_terms']:
+        hdpterms.append(item[0])
+    for item in record['merged_keywords_in_documents']:
+        keywords.append(item[0])
+
+tuples = list(set(itertools.product(hdpterms, keywords)))
+for t in tuples:
+    pattern_check_networkx.check_path(t[0], t[1])
 
 
-def process_paths():
-    keywords = []
-    hdpterms = []
-    print('Produco le liste di keywords e termini hdp...')
-    cursor = manage_nyt_dataset.topicsecription.find().limit(1)
-    for record in cursor:
-        for item in record['tuple_terms']:
-            hdpterms.append(item[0])
-        for item in record['merged_keywords_in_documents']:
-            keywords.append(item[0])
-
-    tuples = list(set(itertools.product(hdpterms, keywords)))
-    print(tuples)
 
 #     print('Ottengo tutti i synset per ogni keyword e per ogni termine hdp')
 #     keyword_group_synsets = []
@@ -369,4 +363,3 @@ def process_paths():
 #process_paths()
 #print(calculate_path_2(wn.synset('dog.n.01'), wn.synset('carnivore.n.01')))
 
-process_paths()

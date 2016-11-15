@@ -1,0 +1,6 @@
+SOURCE	TARGET	RELATIONS	PASSI
+
+kennedy	assaults	[]	-1
+party	vanadium	['hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hyponym', 'hyponym']	8
+politician	politics	['hyponym', 'hyponym', 'holonym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hyponym']	8
+election	melo	[]	None
