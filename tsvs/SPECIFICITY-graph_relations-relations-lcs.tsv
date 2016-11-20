@@ -1,0 +1,254 @@
+person	politics	[]	None	-1
+concept	middle	[]	None	-1
+psychological_feature	governors	[]	None	-1
+person	governors	[]	None	-1
+act	center	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('location.n.01'), Synset('region.n.03'), Synset('area.n.01'), Synset('center.n.01')]	13
+psychological_feature	medium	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('part.n.01'), Synset('substance.n.01'), Synset('medium.n.07')]	5
+person	east	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym']	[Synset('person.n.01'), Synset('causal_agent.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('location.n.01'), Synset('east.n.05')]	5
+act	news	['hyponym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('affidavit.n.01'), Synset('testimony.n.01'), Synset('evidence.n.03'), Synset('information.n.01'), Synset('news.n.02')]	6
+psychological_feature	united	[]	None	-1
+person	state	['holonym', 'hypernym', 'hypernym', 'hyponym', 'hypernym']	[Synset('person.n.01'), Synset('people.n.01'), Synset('group.n.01'), Synset('abstraction.n.06'), Synset('attribute.n.02'), Synset('state.n.02')]	5
+concept	news	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('communication.n.02'), Synset('message.n.02'), Synset('information.n.01'), Synset('news.n.01')]	9
+person	nj	[]	None	-1
+psychological_feature	theodore	[]	None	None
+psychological_feature	state	['hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('location.n.01'), Synset('region.n.03'), Synset('district.n.01'), Synset('administrative_district.n.01'), Synset('state.n.01')]	9
+concept	agnew	[]	None	None
+act	agnew	[]	None	None
+concept	government	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('polity.n.02'), Synset('government.n.01')]	10
+person	newark	[]	None	-1
+psychological_feature	israeliarab	[]	None	None
+psychological_feature	center	['hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('location.n.01'), Synset('region.n.03'), Synset('area.n.01'), Synset('center.n.01')]	8
+psychological_feature	elections	[]	None	-1
+psychological_feature	newark	[]	None	-1
+concept	assaults	[]	None	-1
+act	politics	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('social_relation.n.01'), Synset('politics.n.01')]	9
+concept	politics	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('social_relation.n.01'), Synset('politics.n.01')]	8
+person	jersey	[]	None	-1
+person	interference	[]	None	-1
+psychological_feature	news	['hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('communication.n.02'), Synset('message.n.02'), Synset('information.n.01'), Synset('news.n.01')]	5
+concept	israeliarab	[]	None	None
+act	east	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('position.n.07'), Synset('direction.n.02'), Synset('compass_point.n.01'), Synset('cardinal_compass_point.n.01'), Synset('east.n.01')]	12
+concept	newsmen	[]	None	-1
+concept	east	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('position.n.07'), Synset('direction.n.02'), Synset('compass_point.n.01'), Synset('cardinal_compass_point.n.01'), Synset('east.n.01')]	11
+concept	spiro	[]	None	None
+person	new	[]	None	-1
+act	spiro	[]	None	None
+act	conflict	[]	None	-1
+concept	conflict	[]	None	-1
+concept	jersey	[]	None	-1
+psychological_feature	government	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('polity.n.02'), Synset('government.n.01')]	6
+act	jersey	[]	None	-1
+psychological_feature	agency	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym']	[Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('unit.n.03'), Synset('administrative_unit.n.01'), Synset('agency.n.01')]	7
+person	agnew	[]	None	None
+act	hindrance	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('dithyramb.n.01'), Synset('address.n.03'), Synset('speech_act.n.01'), Synset('act.n.02'), Synset('hindrance.n.03')]	8
+psychological_feature	assaults	[]	None	-1
+act	assaults	[]	None	-1
+psychological_feature	hindrance	['hypernym', 'hypernym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('act.n.02'), Synset('hindrance.n.03')]	3
+act	newark	[]	None	-1
+concept	newark	[]	None	-1
+psychological_feature	spiro	[]	None	None
+psychological_feature	ethical_motive	['hyponym', 'hyponym']	[Synset('psychological_feature.n.01'), Synset('motivation.n.01'), Synset('ethical_motive.n.01')]	2
+concept	new	[]	None	-1
+concept	election	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('act.n.02'), Synset('action.n.01'), Synset('choice.n.02'), Synset('election.n.02')]	9
+act	new	[]	None	-1
+act	election	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('dithyramb.n.01'), Synset('address.n.03'), Synset('speech_act.n.01'), Synset('act.n.02'), Synset('action.n.01'), Synset('choice.n.02'), Synset('election.n.02')]	10
+person	conflict	['holonym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym']	[Synset('person.n.01'), Synset('people.n.01'), Synset('group.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('group_action.n.01'), Synset('conflict.n.01')]	7
+act	israeliarab	[]	None	None
+act	reporter	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'holonym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('people.n.01'), Synset('person.n.01'), Synset('communicator.n.01'), Synset('reporter.n.01')]	11
+psychological_feature	east	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('position.n.07'), Synset('direction.n.02'), Synset('compass_point.n.01'), Synset('cardinal_compass_point.n.01'), Synset('east.n.01')]	7
+person	assaults	[]	None	-1
+person	news	['holonym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('person.n.01'), Synset('people.n.01'), Synset('group.n.01'), Synset('abstraction.n.06'), Synset('communication.n.02'), Synset('message.n.02'), Synset('information.n.01'), Synset('news.n.01')]	7
+psychological_feature	politics	['hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('social_relation.n.01'), Synset('politics.n.01')]	4
+concept	nj	[]	None	-1
+person	medium	['hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym']	[Synset('person.n.01'), Synset('organism.n.01'), Synset('living_thing.n.01'), Synset('whole.n.02'), Synset('artifact.n.01'), Synset('instrumentality.n.03'), Synset('medium.n.01')]	6
+psychological_feature	jersey	[]	None	-1
+act	office	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('arrangement.n.02'), Synset('flower_arrangement.n.01'), Synset('decoration.n.01'), Synset('artifact.n.01'), Synset('structure.n.01'), Synset('establishment.n.04'), Synset('place_of_business.n.01'), Synset('office.n.01')]	15
+concept	office	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('arrangement.n.02'), Synset('flower_arrangement.n.01'), Synset('decoration.n.01'), Synset('artifact.n.01'), Synset('structure.n.01'), Synset('establishment.n.04'), Synset('place_of_business.n.01'), Synset('office.n.01')]	14
+concept	hindrance	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('act.n.02'), Synset('hindrance.n.03')]	7
+psychological_feature	conflict	['hypernym', 'hyponym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('group_action.n.01'), Synset('conflict.n.01')]	3
+person	israeliarab	[]	None	None
+person	theodore	[]	None	None
+person	reporter	['hypernym', 'hypernym']	[Synset('person.n.01'), Synset('communicator.n.01'), Synset('reporter.n.01')]	2
+psychological_feature	reporter	['hypernym', 'hypernym', 'hypernym', 'holonym', 'hypernym', 'hypernym']	[Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('people.n.01'), Synset('person.n.01'), Synset('communicator.n.01'), Synset('reporter.n.01')]	6
+person	government	['holonym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('person.n.01'), Synset('people.n.01'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('polity.n.02'), Synset('government.n.01')]	6
+act	united	[]	None	-1
+psychological_feature	new	[]	None	-1
+concept	united	[]	None	-1
+person	spiro	[]	None	None
+act	ethical_motive	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hyponym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('motivation.n.01'), Synset('ethical_motive.n.01')]	9
+concept	medium	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('arrangement.n.02'), Synset('flower_arrangement.n.01'), Synset('decoration.n.01'), Synset('artifact.n.01'), Synset('instrumentality.n.03'), Synset('medium.n.01')]	12
+concept	ethical_motive	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('motivation.n.01'), Synset('ethical_motive.n.01')]	6
+act	medium	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('arrangement.n.02'), Synset('flower_arrangement.n.01'), Synset('decoration.n.01'), Synset('artifact.n.01'), Synset('instrumentality.n.03'), Synset('medium.n.01')]	13
+act	governor	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'holonym', 'hypernym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('people.n.01'), Synset('person.n.01'), Synset('leader.n.01'), Synset('politician.n.01'), Synset('governor.n.01')]	12
+person	office	['hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('person.n.01'), Synset('organism.n.01'), Synset('living_thing.n.01'), Synset('whole.n.02'), Synset('artifact.n.01'), Synset('structure.n.01'), Synset('establishment.n.04'), Synset('place_of_business.n.01'), Synset('office.n.01')]	8
+person	center	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('person.n.01'), Synset('causal_agent.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('location.n.01'), Synset('region.n.03'), Synset('area.n.01'), Synset('center.n.01')]	7
+concept	governor	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'holonym', 'hypernym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('people.n.01'), Synset('person.n.01'), Synset('leader.n.01'), Synset('politician.n.01'), Synset('governor.n.01')]	11
+psychological_feature	agnew	[]	None	None
+concept	theodore	[]	None	None
+act	state	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('location.n.01'), Synset('region.n.03'), Synset('district.n.01'), Synset('administrative_district.n.01'), Synset('state.n.01')]	14
+act	theodore	[]	None	None
+psychological_feature	nj	[]	None	-1
+concept	state	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('concept.n.01'), Synset('idea.n.01'), Synset('content.n.05'), Synset('cognition.n.01'), Synset('psychological_feature.n.01'), Synset('abstraction.n.06'), Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('location.n.01'), Synset('region.n.03'), Synset('district.n.01'), Synset('administrative_district.n.01'), Synset('state.n.01')]	13
+act	government	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('act.n.01'), Synset('legal_document.n.01'), Synset('document.n.01'), Synset('writing.n.02'), Synset('written_communication.n.01'), Synset('communication.n.02'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('polity.n.02'), Synset('government.n.01')]	11
+act	nj	[]	None	-1
+person	united	[]	None	-1
+person	election	['holonym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym']	[Synset('person.n.01'), Synset('people.n.01'), Synset('group.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('act.n.02'), Synset('action.n.01'), Synset('choice.n.02'), Synset('election.n.02')]	9
+person	ethical_motive	['holonym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym']	[Synset('person.n.01'), Synset('people.n.01'), Synset('group.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('motivation.n.01'), Synset('ethical_motive.n.01')]	6
+
+entity	festival	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('act.n.02'), Synset('activity.n.01'), Synset('diversion.n.01'), Synset('celebration.n.02'), Synset('festival.n.02')]	8
+abstractedness	western	[]	None	-1
+abstractedness	data	[]	None	-1
+entity	kir	[]	None	None
+abstractedness	motion	[]	None	-1
+abstractedness	nations	[]	None	-1
+abstractedness	specific	[]	None	-1
+entity	league	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('association.n.01'), Synset('league.n.01')]	6
+entity	commerce	['hyponym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('group_action.n.01'), Synset('transaction.n.01'), Synset('commerce.n.01')]	6
+abstractedness	soviet	[]	None	-1
+abstractedness	franco	[]	None	-1
+abstractedness	cuba	[]	None	-1
+abstractedness	par	[]	None	-1
+entity	power	['hyponym', 'hyponym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('attribute.n.02'), Synset('quality.n.01'), Synset('power.n.01')]	4
+entity	politics	['hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('social_relation.n.01'), Synset('politics.n.01')]	4
+abstractedness	travel	[]	None	-1
+entity	relations	['hyponym', 'hypernym', 'hypernym', 'hyponym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('social_relation.n.01'), Synset('relations.n.01')]	4
+abstractedness	reviews	[]	None	-1
+abstractedness	security	[]	None	-1
+abstractedness	american	[]	None	-1
+abstractedness	france	[]	None	-1
+abstractedness	politics	[]	None	-1
+entity	travel	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('act.n.02'), Synset('action.n.01'), Synset('change.n.03'), Synset('motion.n.06'), Synset('travel.n.01')]	8
+entity	American	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('causal_agent.n.01'), Synset('person.n.01'), Synset('inhabitant.n.01'), Synset('american.n.01')]	5
+abstractedness	rusk	[]	None	-1
+abstractedness	mutual	[]	None	-1
+entity	franco	[]	None	-1
+entity	equality	['hyponym', 'hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('attribute.n.02'), Synset('state.n.02'), Synset('status.n.01'), Synset('equality.n.02')]	5
+entity	Cuba	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'holonym', 'holonym', 'holonym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('causal_agent.n.01'), Synset('person.n.01'), Synset('inhabitant.n.01'), Synset('american.n.01'), Synset('united_states.n.01'), Synset('organization_of_american_states.n.01'), Synset('cuba.n.01')]	8
+abstractedness	us	[]	None	-1
+entity	Western	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hyponym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('social_event.n.01'), Synset('show.n.03'), Synset('movie.n.01'), Synset('feature.n.03'), Synset('western.n.01')]	8
+abstractedness	armament	[]	None	-1
+abstractedness	1st	[]	None	-1
+entity	reappraisal	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hyponym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('cognition.n.01'), Synset('process.n.02'), Synset('basic_cognitive_process.n.01'), Synset('classification.n.03'), Synset('appraisal.n.01'), Synset('reappraisal.n.01')]	8
+entity	movement	['hyponym', 'hypernym', 'hypernym', 'hyponym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('happening.n.01'), Synset('movement.n.03')]	5
+abstractedness	big	[]	None	-1
+entity	nation	['hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('people.n.01'), Synset('nation.n.02')]	4
+entity	datum	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hyponym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('cognition.n.01'), Synset('information.n.02'), Synset('datum.n.01')]	5
+entity	afonso	[]	None	None
+abstractedness	festivals	[]	None	-1
+abstractedness	commerce	[]	None	-1
+abstractedness	1	[]	None	-1
+abstractedness	ussr	[]	None	-1
+abstractedness	possessions	[]	None	-1
+entity	international	[]	None	-1
+entity	specific	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('causal_agent.n.01'), Synset('agent.n.03'), Synset('drug.n.01'), Synset('medicine.n.02'), Synset('specific.n.02')]	6
+abstractedness	sarin	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hyponym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('state.n.02'), Synset('attribute.n.02'), Synset('abstraction.n.06'), Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('causal_agent.n.01'), Synset('agent.n.03'), Synset('nerve_gas.n.01'), Synset('organophosphate_nerve_agent.n.01'), Synset('sarin.n.01')]	14
+entity	sergeyevich	[]	None	None
+abstractedness	vacations	[]	None	-1
+abstractedness	government	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('state.n.02'), Synset('attribute.n.02'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('polity.n.02'), Synset('government.n.01')]	12
+abstractedness	union	[]	None	-1
+abstractedness	cold	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('physical_condition.n.01'), Synset('pathological_state.n.01'), Synset('ill_health.n.01'), Synset('illness.n.01'), Synset('disease.n.01'), Synset('communicable_disease.n.01'), Synset('cold.n.01')]	11
+abstractedness	nikita	[]	None	None
+entity	sarin	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hyponym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('causal_agent.n.01'), Synset('agent.n.03'), Synset('nerve_gas.n.01'), Synset('organophosphate_nerve_agent.n.01'), Synset('sarin.n.01')]	6
+entity	cold	['hypernym', 'hyponym', 'hyponym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hyponym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('process.n.06'), Synset('degeneration.n.01'), Synset('macular_degeneration.n.01'), Synset('eye_disease.n.01'), Synset('disease.n.01'), Synset('communicable_disease.n.01'), Synset('cold.n.01')]	8
+abstractedness	afonso	[]	None	None
+entity	ussr	[]	None	-1
+entity	one	['hyponym', 'hyponym', 'hyponym', 'hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('measure.n.02'), Synset('definite_quantity.n.01'), Synset('number.n.02'), Synset('integer.n.01'), Synset('digit.n.01'), Synset('one.n.01')]	7
+abstractedness	intergovernment	[]	None	None
+abstractedness	nitrogen	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('state.n.02'), Synset('attribute.n.02'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('halogen.n.01'), Synset('iodine.n.01'), Synset('chemical_element.n.01'), Synset('nitrogen.n.01')]	12
+abstractedness	sergeyevich	[]	None	None
+entity	vacations	[]	None	-1
+abstractedness	international	[]	None	-1
+entity	arinos	[]	None	None
+abstractedness	khrushchev	[]	None	-1
+entity	possession	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('act.n.02'), Synset('activity.n.01'), Synset('control.n.05'), Synset('possession.n.01')]	7
+entity	intergovernment	[]	None	None
+entity	nitrogen	['hypernym', 'hyponym', 'hyponym', 'hyponym', 'hypernym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('matter.n.03'), Synset('fluid.n.02'), Synset('gas.n.02'), Synset('nitrogen.n.01')]	5
+abstractedness	hemisphere	[]	None	-1
+entity	1st	[]	None	-1
+abstractedness	melo	[]	None	None
+entity	de	[]	None	-1
+entity	nikita	[]	None	None
+entity	socialist	[]	None	-1
+abstractedness	felix	[]	None	None
+entity	big	[]	None	-1
+abstractedness	dean	[]	None	-1
+entity	war	[]	None	-1
+entity	United_States	['hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'holonym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('causal_agent.n.01'), Synset('person.n.01'), Synset('inhabitant.n.01'), Synset('american.n.01'), Synset('united_states.n.01')]	6
+entity	armament	['hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hyponym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('whole.n.02'), Synset('artifact.n.01'), Synset('instrumentality.n.03'), Synset('weaponry.n.01'), Synset('armament.n.01')]	7
+abstractedness	war	[]	None	-1
+entity	production	['hyponym', 'hyponym', 'hyponym', 'hyponym', 'hyponym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('communication.n.02'), Synset('display.n.05'), Synset('presentation.n.03'), Synset('production.n.02')]	5
+abstractedness	power	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('state.n.02'), Synset('attribute.n.02'), Synset('quality.n.01'), Synset('power.n.01')]	8
+entity	security	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('possession.n.02'), Synset('assets.n.01'), Synset('security.n.02')]	5
+abstractedness	picture	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hyponym', 'hypernym', 'hyponym', 'hyponym', 'hyponym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('state.n.02'), Synset('attribute.n.02'), Synset('abstraction.n.06'), Synset('communication.n.02'), Synset('visual_communication.n.01'), Synset('artwork.n.01'), Synset('illustration.n.01'), Synset('picture.n.05')]	12
+abstractedness	de	[]	None	-1
+entity	france	[]	None	-1
+entity	mental_picture	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('cognition.n.01'), Synset('content.n.05'), Synset('representation.n.01'), Synset('image.n.01'), Synset('mental_picture.n.01')]	7
+entity	rusk	[]	None	-1
+abstractedness	socialist	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'holonym', 'hyponym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('state.n.02'), Synset('attribute.n.02'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('association.n.01'), Synset('fabian_society.n.01'), Synset('fabian.n.01'), Synset('socialist.n.01')]	14
+abstractedness	league	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('state.n.02'), Synset('attribute.n.02'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('association.n.01'), Synset('league.n.01')]	12
+abstractedness	production	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('state.n.02'), Synset('attribute.n.02'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('act.n.02'), Synset('production.n.01')]	11
+entity	mutual	[]	None	-1
+abstractedness	kir	[]	None	None
+abstractedness	arinos	[]	None	None
+entity	soviet	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hyponym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('unit.n.03'), Synset('administrative_unit.n.01'), Synset('council.n.01'), Synset('soviet.n.01')]	8
+entity	khrushchev	[]	None	-1
+entity	melo	[]	None	None
+entity	felix	[]	None	None
+abstractedness	relations	['hypernym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hyponym']	[Synset('abstractedness.n.01'), Synset('preoccupation.n.02'), Synset('cognitive_state.n.01'), Synset('psychological_state.n.01'), Synset('condition.n.01'), Synset('state.n.02'), Synset('attribute.n.02'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('social_relation.n.01'), Synset('relations.n.01')]	10
+entity	hemisphere	['hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('location.n.01'), Synset('region.n.03'), Synset('geographical_area.n.01'), Synset('hemisphere.n.01')]	6
+entity	dean	['hyponym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'holonym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('body.n.02'), Synset('sacred_college.n.01'), Synset('cardinal.n.01'), Synset('dean.n.04')]	7
+abstractedness	republics	[]	None	-1
+entity	government	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('polity.n.02'), Synset('government.n.01')]	6
+entity	coupling	['hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('process.n.06'), Synset('organic_process.n.01'), Synset('bodily_process.n.01'), Synset('sexual_activity.n.01'), Synset('coupling.n.03')]	6
+entity	republics	[]	None	-1
+
+entity	domingo	[]	None	-1
+drawing_card	moves	[]	None	-1
+entity	john	[]	None	-1
+entity	united	[]	None	-1
+entity	tom	[]	None	-1
+entity	church	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('institution.n.01'), Synset('religion.n.02'), Synset('church.n.01')]	7
+drawing_card	lindsay	[]	None	-1
+entity	religion	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('institution.n.01'), Synset('religion.n.02')]	6
+entity	vanden	[]	None	None
+entity	Argentina	['hyponym', 'hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('biological_group.n.01'), Synset('taxonomic_group.n.01'), Synset('genus.n.02'), Synset('fish_genus.n.01'), Synset('argentina.n.02')]	7
+drawing_card	juan	[]	None	None
+drawing_card	wm	[]	None	None
+drawing_card	states	[]	None	-1
+drawing_card	india	[]	None	-1
+entity	heuvel	[]	None	None
+drawing_card	deaths	[]	None	-1
+entity	deaths	[]	None	-1
+entity	state	['hypernym', 'hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('object.n.01'), Synset('location.n.01'), Synset('region.n.03'), Synset('district.n.01'), Synset('administrative_district.n.01'), Synset('state.n.01')]	7
+drawing_card	religion	[]	None	-1
+drawing_card	heuvel	[]	None	None
+entity	india	[]	None	-1
+drawing_card	churches	[]	None	-1
+drawing_card	united	[]	None	-1
+drawing_card	john	[]	None	-1
+drawing_card	interfaith	[]	None	-1
+entity	wm	[]	None	None
+entity	juan	[]	None	None
+entity	politics	['hyponym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('social_relation.n.01'), Synset('politics.n.01')]	4
+drawing_card	vanden	[]	None	None
+drawing_card	argentina	[]	None	-1
+drawing_card	duarte	[]	None	None
+entity	lindsay	[]	None	-1
+drawing_card	connally	[]	None	None
+drawing_card	tom	[]	None	-1
+drawing_card	government	[]	None	-1
+entity	move	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hyponym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('psychological_feature.n.01'), Synset('event.n.01'), Synset('act.n.02'), Synset('action.n.01'), Synset('change.n.03'), Synset('move.n.02')]	7
+drawing_card	v	[]	None	-1
+drawing_card	domingo	[]	None	-1
+drawing_card	politics	[]	None	-1
+drawing_card	eva	[]	None	None
+drawing_card	peron	[]	None	-1
+entity	government	['hyponym', 'hypernym', 'hypernym', 'hypernym', 'hypernym', 'hypernym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('group.n.01'), Synset('social_group.n.01'), Synset('organization.n.01'), Synset('polity.n.02'), Synset('government.n.01')]	6
+entity	five	['hyponym', 'hyponym', 'hyponym', 'hyponym', 'hypernym', 'hypernym', 'hyponym']	[Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('measure.n.02'), Synset('definite_quantity.n.01'), Synset('number.n.02'), Synset('integer.n.01'), Synset('digit.n.01'), Synset('five.n.01')]	7
+entity	j	[]	None	-1
+drawing_card	j	[]	None	-1
+entity	duarte	[]	None	None
+entity	peron	[]	None	-1
+entity	connally	[]	None	None
+entity	eva	[]	None	None
+entity	interfaith	[]	None	-1

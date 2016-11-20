@@ -6,19 +6,23 @@ import itertools
 import pattern_check_networkx
 
 keywords = []
-hdpterms = []
+terms = []
 print('Produco le liste di keywords e termini hdp...')
 cursor = manage_nyt_dataset.topicsecription.find().limit(3)
+filename = 'SPECIFICITY-relations-graph_relations-lcs' #CAMBIA QUI
 for record in cursor:
-    for item in record['tuple_terms']:
-        hdpterms.append(item[0])
+    keywords.clear()
+    terms.clear()
+    for item in record['SPECIFICITY-relations-graph_relations-lcs']: #E QUI
+        terms.append(item[0])
     for item in record['merged_keywords_in_documents']:
         keywords.append(item[0])
-
-tuples = list(set(itertools.product(hdpterms, keywords)))
-for t in tuples:
-    pattern_check_networkx.check_path(t[0], t[1])
-
+    tuples = list(set(itertools.product(terms, keywords)))
+    with open(filename + '.tsv', 'a') as file:
+        file.write('\n')
+        file.close()
+    for t in tuples:
+        pattern_check_networkx.check_path(t[0], t[1], filename)
 
 
 #     print('Ottengo tutti i synset per ogni keyword e per ogni termine hdp')
